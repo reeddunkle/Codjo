@@ -10,7 +10,7 @@ Given k and an n-digit number, help Sandy determine a palindrome number she can 
 Input Format
 ----
 
-- the string of numbers that Sandy must attempt to make palindromic
+- The string of numbers that Sandy must attempt to make palindromic
 - `k`, the maximum number of digits that can be altered
 
 Treat the integers as numeric strings. Leading zeros are permitted and can't be ignored (So 0011 is not a palindrome, 0110 is a valid palindrome). A digit can be modified more than once. Each character in the number is a positive integer
