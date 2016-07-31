@@ -36,3 +36,9 @@ Optional Goals
 ----
 
 - How could you maximize the output number?
+
+
+Local Testing
+----
+
+Download the test script (or copy and paste), and run it with the python interpreter. Your module must be named `richie_rich.py`, and your function `make_palindrome`.
