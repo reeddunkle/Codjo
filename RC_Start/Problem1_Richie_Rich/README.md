@@ -13,8 +13,6 @@ Input Format
 The first line contains two space-separated integers, `n` (the number of digits in the number) and `k` (the maximum number of digits that can be altered), respectively.
 The second line contains an n-digit string of numbers that Sandy must attempt to make palindromic.
 
-### Notes
-
 - Treat the integers as numeric strings. Leading zeros are permitted and can't be ignored (So 0011 is not a palindrome, 0110 is a valid palindrome). A digit can be modified more than once.
 - Each character i in the number is a positive integer
 
@@ -32,7 +30,7 @@ Explicit Goals
 - Write clean code
 - Optimize your code
 
-Optional Goals
+Extra Goals
 ----
 
 - How could you maximize the output number?
@@ -42,6 +40,12 @@ Local Testing
 ----
 
 Download the test script (or copy and paste), and run it with the python interpreter. Your module must be named `richie_rich.py`, and your function `make_palindrome`.
+
+
+Notes
+----
+
+This problem may be too easy for the 72 hours given. The "Extra Goal" of maximizing the output is difficult though. I'm hoping that this part of the challenge will hold your interest, and facilitate good pairing discussion.
 
 
 ----
