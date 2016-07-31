@@ -1,7 +1,7 @@
 Description:
 ----
 
-Sandy likes palindromes. A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward as it does forward. For example, **madam** is a palindrome.
+Sandy likes palindromes. A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward as it does forward. For example, "madam" is a palindrome.
 
 On her 7th birthday, Sandy's uncle, Richie Rich, offered her an n-digit check which she refused because the number was not a palindrome. Richie then challenged Sandy to make the number palindromic by changing no more than  digits. Sandy can only change 1 digit at a time, and cannot add digits to (or remove digits from) the number.
 
