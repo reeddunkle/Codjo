@@ -13,7 +13,7 @@ Input Format
 - The string of numbers that Sandy must attempt to make palindromic
 - `k`, the maximum number of digits that can be altered
 
-Treat the integers as numeric strings. Leading zeros are permitted and can't be ignored (So 0011 is not a palindrome, 0110 is a valid palindrome). A digit can be modified more than once. Each character in the number is a positive integer
+Treat the integers as numeric strings. Leading zeros are permitted and can't be ignored (So 0011 is not a palindrome, 0110 is a valid palindrome). A digit can be modified more than once. Each character in the number is a positive integer.
 
 
 Output Format
