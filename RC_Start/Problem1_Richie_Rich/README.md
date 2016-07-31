@@ -19,7 +19,7 @@ Treat the integers as numeric strings. Leading zeros are permitted and can't be 
 Output Format
 ----
 
-Return a sigle palindrome number that can be made by changing no more than k digits; if this is not possible, return `-1`.
+Return a single palindrome number that can be made by changing no more than k digits; if this is not possible, return `-1`.
 
 
 Explicit Goals
