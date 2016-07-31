@@ -44,5 +44,6 @@ Local Testing
 Download the test script (or copy and paste), and run it with the python interpreter. Your module must be named `richie_rich.py`, and your function `make_palindrome`.
 
 
+----
 
-[0] Taken from [this](https://www.hackerrank.com/challenges/richie-rich) Hacker Rank problem
+Taken from [this](https://www.hackerrank.com/challenges/richie-rich) Hacker Rank problem
