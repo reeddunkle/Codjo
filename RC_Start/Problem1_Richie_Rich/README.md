@@ -55,7 +55,7 @@ OK
 Notes
 ----
 
-This problem may be too easy for the 72 hours given. The "Extra Goal" of maximizing the output is difficult though. I'm hoping that this part of the challenge will hold your interest, and facilitate good pairing discussion.
+This problem may be too easy for the 72 hours given. The "Extra Goal" of maximizing the output is quite difficult though. I hope that the challenge will hold your interest, and facilitate good pairing discussion.
 
 
 ----
