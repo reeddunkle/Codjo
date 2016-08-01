@@ -38,7 +38,18 @@ Extra Goals
 Local Testing
 ----
 
-Download the test script (or copy and paste), and run it with the python interpreter. Your module must be named `richie_rich.py`, and your function `make_palindrome`.
+Download the test script (or copy and paste), and run it with the python interpreter. Your module must be named `richie_rich.py`, your function named `make_palindrome`, and the test script in the same directory as your solution (`richie_rich.py`).
+
+Example:
+
+```
+python richie_rich_test.py 
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK
+```
 
 
 Notes
