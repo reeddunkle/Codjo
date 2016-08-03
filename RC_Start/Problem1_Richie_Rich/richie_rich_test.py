@@ -64,7 +64,7 @@ class PalindromeTests(unittest.TestCase):
     def test_maximizes_output_two(self):
         actual = make_palindrome('11119111', 4)
 
-        self.assertEqual(actual, '992299')
+        self.assertEqual(actual, '91199119')
 
 
 if __name__ == '__main__':
