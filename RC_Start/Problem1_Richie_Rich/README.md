@@ -32,7 +32,7 @@ Explicit Goals
 Extra Goals
 ----
 
-- How could you maximize the output number?
+- How could you maximize the output number? i.e. Change `'3943'` to `'3993'` rather than `'3443'`.
 
 
 Local Testing
@@ -43,7 +43,7 @@ Download the test script (or copy and paste), and run it with the python interpr
 Example:
 
 ```
-python richie_rich_test.py 
+python richie_rich_test.py
 ......
 ----------------------------------------------------------------------
 Ran 6 tests in 0.000s
