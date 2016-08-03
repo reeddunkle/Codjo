@@ -32,7 +32,9 @@ Explicit Goals
 Extra Goals
 ----
 
-- How could you maximize the output number? i.e. Given only 1 change (`k = 1`), change `'3943'` to `'3993'` rather than `'3443'`. Given 3 changes (`k = 3`), change `'3943'` to `'9999'`.
+- How could you maximize the output number?
+- Given only 1 change (`k = 1`), change `'3943'` to `'3993'` rather than `'3443'`
+- Given 3 changes (`k = 3`), change `'3943'` to `'9999'`.
 
 
 Local Testing
@@ -44,11 +46,11 @@ Example:
 
 ```
 python richie_rich_test.py
-......
+......ss
 ----------------------------------------------------------------------
-Ran 6 tests in 0.000s
+Ran 8 tests in 0.000s
 
-OK
+OK (skipped=2)
 ```
 
 
