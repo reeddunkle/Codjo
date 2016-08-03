@@ -32,7 +32,7 @@ Explicit Goals
 Extra Goals
 ----
 
-- How could you maximize the output number? i.e. Change `'3943'` to `'3993'` rather than `'3443'`.
+- How could you maximize the output number? i.e. Given only 1 change (`k = 1`), change `'3943'` to `'3993'` rather than `'3443'`. Given 3 changes (`k = 3`), change `'3943'` to `'9999'`.
 
 
 Local Testing
