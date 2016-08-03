@@ -16,24 +16,28 @@ class PalindromeTests(unittest.TestCase):
     def test_make_palindrome_shift_one(self):
         actual = make_palindrome('3943', 1)
 
+        self.assertTrue(actual != -1)
         self.assertTrue(is_palindrome(actual))
 
 
     def test_make_palindrome_shift_three(self):
         actual = make_palindrome('092282', 3)
 
+        self.assertTrue(actual != -1)
         self.assertTrue(is_palindrome(actual))
 
 
     def test_make_palindrome_four(self):
         actual = make_palindrome('11119111', 4)
 
+        self.assertTrue(actual != -1)
         self.assertTrue(is_palindrome(actual))
 
 
     def test_make_palindrome_eight(self):
         actual = make_palindrome('128392759430124', 8)
 
+        self.assertTrue(actual != -1)
         self.assertTrue(is_palindrome(actual))
 
 
@@ -53,4 +57,3 @@ class PalindromeTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
