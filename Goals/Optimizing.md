@@ -64,7 +64,7 @@ is_palindrome(input):
     return True
 ```
 
-Given an input of length `N`, what's it's time complexity? `N/2`.
+Given an input of length `N`, what's its time complexity? `N/2`.
 
 
 Space
