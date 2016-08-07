@@ -7,7 +7,7 @@
 
 **Team 2**
 - Stephan @smsalleyne (EST)
-- Khalid @khalid (UK, 5-hours ahead of EST)
+- Khalid @khalid (UK, 5 hours ahead of EST)
 
 **Team 3**
 - Paul @paulitheism (EST or Central)
@@ -15,9 +15,10 @@
 
 **Team 4**
 - Cindy @cpallares (PST)
-- Leo @leo
+- Luke @lukewrites (PST)
 
 
 **Unassigned**
 - Samarth @jajoosam
 - Reed @reeddunkle
+- Leo @leo
