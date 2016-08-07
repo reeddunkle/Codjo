@@ -3,6 +3,22 @@ import unittest
 from sorted_search import find
 
 
+class NoLengthMethod(Exception):
+    pass
+
+
+class Listy(list):
+
+    def __len__(self):
+        raise NoLengthMethod('No __len__ method found.')
+
+    def element_at(self, i):
+        try:
+            return self.__getitem__(i)
+        except IndexError:
+            return -1
+
+
 class SortedSearchTests(unittest.TestCase):
 
     def test_finds_index1(self):
@@ -39,6 +55,13 @@ class SortedSearchTests(unittest.TestCase):
         listy = range(1000000)
         x = 999999
         self.assertEqual(999999, find(x, listy))
+
+
+    @unittest.skip('Extra Credit: No __len__ method.')
+    def test_no_length_method(self):
+        listy = Listy(list(range(200)))
+        x = 100
+        self.assertEqual(100, find(x, listy))
 
 
 if __name__ == '__main__':

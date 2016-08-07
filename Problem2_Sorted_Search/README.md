@@ -25,11 +25,12 @@ This problem is first an exercise in problem solving. If you want to find an ele
 1. Find the index in `listy` at which element x occurs
 2. Look for a way to do this in less than N run-time (`O(n)`)
 3. Write well-named functions and variables
+4. (Don't use the `index` method)
 
 Extra Goals
 ----
 
-Imagine that `listy` has no size method. By this I mean that you can't call `len()` on `listy`. Instead, `listy` has a method called `element_at(i)` method, which returns the element at index `i` in `O(1)` time. If `i` is beyond the bounds of the data structure, it returns `-1`. (For this reason, `listy` only supports positive integers.) Can you use `element_at(i)` to complete the challenge above while still keeping the run-time below `O(n)`?
+Imagine that `listy` is not a normal list structure, but a modified structure that has no `__len__` method. By this I mean that you can't call `len()` on `listy`. Instead, `listy` has a method called `element_at(i)` method, which returns the element at index `i` in `O(1)` time. If `i` is beyond the bounds of the data structure, it returns `-1`. (For this reason, `listy` only supports positive integers.) Can you use `element_at(i)` to complete the challenge above while still keeping the run-time below `O(n)`?
 
 Local Testing
 ----
