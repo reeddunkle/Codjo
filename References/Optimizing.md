@@ -98,7 +98,7 @@ def print_first_five(numbers):
 
 It wouldn't matter if the input were 200 instead of 10, right? It's just going to print the first five numbers in the list. This is "constant time".
 
-You can read about Big O on , but I want you to be aware of two more common ones: `O(log(n))` and `O(N log(n))`. The first is the goal for searching, and the second is the goal for sorting. Again, I'll cover this more later.
+Before moving on to space, I want to point out two more common time complexities: `O(log(n))` and `O(N log(n))`. The first is the goal for searching, and the second is the goal for sorting. Again, I'll cover this more later.
 
 
 
