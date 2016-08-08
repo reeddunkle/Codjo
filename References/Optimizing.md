@@ -10,6 +10,17 @@ Big O
 From [Wikipedia](https://en.wikipedia.org/wiki/Big_O_notation):
 > In computer science, big O notation is used to classify algorithms by how they respond to changes in input size, such as how the processing time of an algorithm changes as the problem size becomes extremely large.
 
+
+Overview
+----
+
+Throughout this I move between talking about optimization and complexity without really pointing out their relationship. As the Big O explanation more or less says, **complexity measures how the function responds when you change the input size.** That definition is key, and will clear up any doubt later.
+
+All of the Big O measurements throughout this are in reference to this response.
+
+**Optimization is trying to reduce the size of that response.**
+
+
 Time
 ----
 
@@ -24,11 +35,11 @@ def is_palindrome(text):
     return True
 ```
 
-Let's say the input is `1234554321` and so `text` has a length of 10. When you ask, "What is my time complexity?", that's an official-sounding way of asking, "Given this input, how many times does my method have to do something?"
+When you ask, "What is the time complexity of this function?", that's an official-sounding way of asking, "How does my function respond to inputs of different sizes?"
 
-In this example, the method has `text` of length 10, and it assigns `i` to each number in the range of 0 to half the length of `text`. In the for-loop, `i` is going to be each number from `0...10//2`.
+Let's say the input is `1234554321`, and so `text` is length 10. The function assigns `i` to each number in the range of 0 to half the length of `text`. In the for-loop, `i` is going to be each number from `0...10//2`.
 
-Now, you might point out that this function could exit the loop midway with its `return False` statement. Whether it does that or not is out of our control, though, and so another thing you'll hear people talk about is "worse case scenario". That's the part we can try to control and optimize.
+Now, you might point out that this function could exit the loop midway with its `return False` statement. Whether it does that or not is out of our control, though, and so another thing you'll hear people talk about is "worse case scenario". We're concered with the part that we can try to control and optimize.
 
 This idea of only needing to go half-way through the input came up in our group discussion, and someone said that they hadn't realized until later that they only needed to iterate through half of the input. Instead they used something like this:
 
@@ -50,9 +61,11 @@ I should point out that, despite these all being toy examples, addressing the pr
 
 There are a few terms you should be aware of that people use to talk about them. For the example above where the function has to iterate through the entirety of the input, they say that it has a **linear** time complexity (or run-time). Linear, because the larger your input, the larger the time complexity. The "Big O" notation for this is `O(n)`.
 
+To be clear, this function responds linearly to inputs of different sizes.
+
 For the first example, where you only have to go through half of the input, the Big O notation is `O(n/2)`.
 
-One thing that doesn't seem obvious at first, is that when you have to go through `n` a set number of times, they usually drop the constant. Take this example, with this input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
+One thing that doesn't seem obvious at first, is that when you have to go through `n` a set number of times, we drop the constant. Take this example, with this input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
 ```python
 def print_twice(numbers):
@@ -63,9 +76,11 @@ def print_twice(numbers):
         print(num)
 ```
 
-It has to go through the input twice. So it would be `O(2n)`. If you ask any CS person, they will point out that constants (the `2` in this case) aren't very important when talking about really big numbers.
+It has to go through the input twice. So it would be `O(2n)`. The common explanation for this is that constants aren't very important when talking about really big numbers. That's true, but I've found it rather unsatisfying.
 
-Regardless of that, what you and I need to know for practical purposes like interviews, is that we don't include the constants in Big O. So for this example the time complexity would still be `O(n)`.
+A better explanation in my opinion, is that we are concerned with how the function respods to different inputs. When you look at it like that, it's obvious why the constant isn't important: the constant doesn't change.
+
+For this example the time complexity is still `O(n)`.
 
 Now, take _this_ example, with the same input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
@@ -88,7 +103,7 @@ So now it's `O(n-squared)`, which is called "quadratic".
 There are common benchmarks for different types of algorithms, namely sorting and searching. I'll cover searching when we go over [Problem2](https://github.com/reeddunkle/Codjo/tree/master/Problem2_Sorted_Search), and we'll do sorting in the near future. You should be aware that [Bubble Sort is notoriously bad](https://youtu.be/k4RRi_ntQc8).
 
 
-Another common one is "constant time", which is written as `O(1)`. This means that regardless of the size of the input, your function only has to do a set, constant number of operations.
+Another common one is "constant time", which is written as `O(1)`. This means no matter how the input changes, your function only has to do a set, constant number of operations.
 
 Here's a short, pointless example using the same input as above, `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
@@ -98,7 +113,7 @@ def print_first_five(numbers):
         print(numbers[i])
 ```
 
-It wouldn't matter if the input were 200 instead of 10, right? It's just going to print the first five numbers in the list. This is "constant time".
+It wouldn't matter if the input were 200 instead of 10, right? It's just going to print the first five numbers in the list. This is "constant time", or `O(1)`.
 
 Before moving on to space, I want to point out two more common time complexities: `O(log(n))` and `O(n log(n))`. The first is the goal for searching, as in Problem2, and the second is the goal for sorting. Again, I'll cover this more later.
 
@@ -109,9 +124,9 @@ Space
 
 Space complexity is talked about in the same way as time complexity. and the common concepts are the same, "constant", "linear", and "quadratic" for example.
 
-Your function's is how much simultaneous memory your function requires. When judging the space complexity of a function, they look for how much memory your function uses in addition to the initial input.
+Your function's space complexity refers to how much simultaneous memory your function requires. Along the same lines, you want to measure how much space your function requires as you change the input size. Therefore we look at how much memory your function uses in addition to the initial input.
 
-I'll go through some simple examples. For all of them, let's assume my input is the same I've been using `numbers = [0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
+I'll go through some simple examples. For all of them, let's assume the input is still `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
 **`O(1)`**
 
@@ -151,7 +166,7 @@ def linear_space(numbers)
     return new_list
 ```
 
-This function requires an n-length list to be held in memory, as it's simply copying the current input.
+This function requires an n-length list to be held in memory, as it's simply copying the current input. The larger the input, the larger `new_list` will swell.
 
 
 Time vs. Space
