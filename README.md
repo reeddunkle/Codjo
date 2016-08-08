@@ -1,6 +1,6 @@
 # Codjo
 
-I'm organizing weekly educational coding challenges for RC Start folks. Each week I'll gather the participants and put them into pairs. I'll find a challenge that seems like it will offer good learning opportunities, and we'll practice:
+[Leo](https://github.com/leotrs) and I are organizing weekly educational coding challenges for RC Start folks. Each week I'll gather the participants and put them into pairs. I'll find a challenge that seems like it will offer good learning opportunities, and we'll practice:
 
 - Collaborating
 - Algorithm problem solving

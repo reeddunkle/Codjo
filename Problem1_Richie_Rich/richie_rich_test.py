@@ -3,12 +3,12 @@ import unittest
 from richie_rich import make_palindrome
 
 
-def is_palindrome(s):
-    for i in range(len(s)//2):
-        if s[i] != s[-1-i]:
+def is_palindrome(text):
+    for i in range(len(text)//2):
+        if text[i] != text[-1-i]:
             return False
-    else:
-        return True
+
+    return True
 
 
 class PalindromeTests(unittest.TestCase):
