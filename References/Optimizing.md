@@ -155,10 +155,10 @@ This function requires an n-length list to be held in memory, as it's simply cop
 Time vs. Space
 ----
 
-Time and space are sometimes competing with one another. You've probably heard people in every field talk about "design tradeoffs". In CS, there tends to be a tradeoff between time and space. Of course you want to try to minimize the requirements of both, but at some level you'll probably find yourself talking about design tradeoffs.
+It's common to find time and space competing with one another. You've probably heard people in every field talk about "design tradeoffs". In CS, there tends to be a tradeoff between time and space. Of course you want to try to minimize the requirements of both, but at some level you'll probably find yourself talking about design tradeoffs.
 
-A simple example is caching. A cache holds in memory some information that you've already spent time calculating, in order to speed up retrieving that information the next time you want it. Given the same input, it saves you the run-time. In other words, you're using extra space to reduce the run-time.
+A simple example is caching. A cache holds in memory some information that you've already spent time calculating, in order to speed up retrieving that information the next time you want it. Given the same input, it spares you the run-time. In other words, you're using extra space to increase speed.
 
-At one end of the spectrum, you could imagine a cache that holds the result of every calculation your function might perform. It's space complexity would be infinite, but its time complexity given this utopian cache could be constant.
+At one end of the spectrum, you could imagine a cache that holds the result of every calculation your function might perform. Its space complexity would be infinite, but its time complexity given this utopian cache could be constant.
 
-On the other end of the spectrum there is no cache, and so it must perform the calculations every time it is run. The space complexity would be constant, but it pays its time complexity with every run.
+On the other end of the spectrum, imagine there is no cache, and so it must perform the calculations every time it is run. You save space, but take more time.
