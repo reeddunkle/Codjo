@@ -11,7 +11,7 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Big_O_notation):
 
 ### Time
 
-In the example of the `is_palindrome` method that I made for the test, I talked about the idea of how much time it requires. When talking about how much time a function requires, people use terms like "time complexity", and "run time", and they will represent it using the "Big O" notation. Here's the method:
+Using the example of the `is_palindrome` method that I made for [the test](https://github.com/reeddunkle/Codjo/blob/master/Problem1_Richie_Rich/richie_rich_test.py) for Problem1, I talked about the idea of how much time it requires. When talking about how much time a function requires, people use terms like "time complexity", and "run time", and they will represent it using the "Big O" notation. Here's the method:
 
 ```python
 def is_palindrome(text):
