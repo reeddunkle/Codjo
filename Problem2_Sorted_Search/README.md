@@ -20,10 +20,14 @@ Return a single integer that represents the index at which the input element x o
 Explicit Goals
 ----
 
-This problem is first an exercise in problem solving. If you want to find an element in `O(n)` time, everyone could do it in a few lines of code. The challenge is to learn a better way. I'll publish some hints in the upcoming days if you can't think of how you could do this.
+This is first an exercise in problem solving. Finding an element in a list in linear time is pretty straight forward. You go through the list until you find it, right?
+
+The challenge is to learn a better way. I'll publish some hints in the upcoming days if you can't think of how you could do this.
+
+During the code review for [Problem1](https://github.com/reeddunkle/Codjo/tree/master/Problem1_Richie_Rich) we talked about optimizing for time and space. In the [references](https://github.com/reeddunkle/Codjo/tree/master/References) directory, I've published an article explaining these concepts, and some of the terms I'll use for this problem, like "linear run-time".
 
 1. Find the index in `listy` at which element x occurs
-2. Look for a way to do this in less than N run-time (`O(n)`)
+2. Look for a way to do this in less than N (linear) run-time (`O(n)`)
 3. Write well-named functions and variables
 4. (Don't use the `index` method)
 
