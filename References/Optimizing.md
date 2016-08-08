@@ -136,7 +136,7 @@ def bubble_sort(numbers):
 
 The first function creates a new list and adds the first five numbers from the input to it. No matter how large `numbers` is, the function only requires a constant 5-length list to be held in memory.
 
-`bubble_sort` on the other hand requires no additional memory. It destroys the original input by mutating it in place, something you'll hear some people criticize in general, but in return it doesn't take up any additional space.
+`bubble_sort` on the other hand requires no additional memory. It destroys the original input by mutating it in place (which is something you'll hear people criticize), but in return it doesn't take up any additional space.
 
 **`O(n)`**
 
