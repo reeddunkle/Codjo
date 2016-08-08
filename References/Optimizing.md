@@ -4,12 +4,14 @@ During the code review for [Problem1](https://github.com/reeddunkle/Codjo/tree/m
 
 **Note:** I'm going to be assuming Python3. For the Python2 equivalent, instead of using `range` you should use `xrange`.
 
-### Big O
+Big O
+----
 
 From [Wikipedia](https://en.wikipedia.org/wiki/Big_O_notation):
 > In computer science, big O notation is used to classify algorithms by how they respond to changes in input size, such as how the processing time of an algorithm changes as the problem size becomes extremely large.
 
-### Time
+Time
+----
 
 Using the example of the `is_palindrome` method that I made for [the test](https://github.com/reeddunkle/Codjo/blob/master/Problem1_Richie_Rich/richie_rich_test.py) for Problem1, I talked about the idea of how much time it requires. When talking about how much time a function requires, people use terms like "time complexity", and "run time", and they will represent it using the "Big O" notation. Here's the method:
 
