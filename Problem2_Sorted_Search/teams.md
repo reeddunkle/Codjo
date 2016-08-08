@@ -7,7 +7,7 @@
 
 **Team 2**
 - Stephan @smsalleyne (ET)
-- Khalid @khalid (UK, 5 hours ahead of ET)
+- Reed @reeddunkle (ET)
 
 **Team 3**
 - Paul @paulitheism (ET or CT)
@@ -21,6 +21,6 @@
 - Samarth @jajoosam (IST 9.5 hours ahead of ET)
 - Leo @leo (PET 1 hour behind ET)
 
-
-**Unassigned**
-- Reed @reeddunkle (ET)
+**Team 6**
+- Khalid @khalid (UK, 5 hours ahead of ET)
+- Ana @ana (PT)
