@@ -1,6 +1,6 @@
 # Optimizing
 
-During the code review for [Problem1](https://github.com/reeddunkle/Codjo/tree/master/Problem1_Richie_Rich), a few times we mentioned the idea of optimizing. Optimizing is something you'll hear people talk about all the time, and I'd like to cover it as best I understand it (I don't have a CS background), and de-mystify it a little I hope.
+During the code review for [Problem1](https://github.com/reeddunkle/Codjo/tree/master/Problem1_Richie_Rich), a few times we mentioned the idea of optimizing. Optimizing is something you'll hear people talk about all the time, and I'd like to cover it as best I understand it (I don't have a CS background), and de-mystify it a little.
 
 **Note:** I'm going to be assuming Python3. For the Python2 equivalent, instead of using `range` you should use `xrange`.
 
@@ -24,7 +24,7 @@ def is_palindrome(text):
     return True
 ```
 
-Let's say the input is `1234554321` and so `text` has a length of 10. When you ask, "What is my time complexity?", that's an official-sounding way of asking, "Given this input, how many times does my method to do something?"
+Let's say the input is `1234554321` and so `text` has a length of 10. When you ask, "What is my time complexity?", that's an official-sounding way of asking, "Given this input, how many times does my method have to do something?"
 
 In this example, the method has `text` of length 10, and it assigns `i` to each number in the range of 0 to half the length of `text`. In the for-loop, `i` is going to be each number from `0...10//2`.
 
