@@ -22,13 +22,13 @@ def is_palindrome(text):
     return True
 ```
 
-So the method gets an input of some length and references it locally as `text`. Let's say the input is `1234554321` and so `text` has a length of 10. When you ask, "What is my time complexity?", that's an official-sounding way of asking, "Given this input, how many times does my method to do something?" and "What determines the number of times it needs to do those things?"
+Let's say the input is `1234554321` and so `text` has a length of 10. When you ask, "What is my time complexity?", that's an official-sounding way of asking, "Given this input, how many times does my method to do something?"
 
-In this example, the method has `text` of length 10, and it goes through each `i` in the range of 0 to half the length of `text`. In the for-loop, `i` is going to be each number from `0...10//2`.
+In this example, the method has `text` of length 10, and it assigns `i` to each number in the range of 0 to half the length of `text`. In the for-loop, `i` is going to be each number from `0...10//2`.
 
-Now, this might exit the loop midway with `return False` statement on line 13. But, whether it does that or not is out of our control. So another thing you'll hear people talk about is "worse case scenario". That's the part we try to control and optimize.
+Now, you might point out that this function could exit the loop midway with its `return False` statement. Whether it does that or not is out of our control, though, and so another thing you'll hear people talk about is "worse case scenario". That's the part we can try to control and optimize.
 
-This idea of only needing to go half-way through the input came up. Another approach was something like this:
+This idea of only needing to go half-way through the input came up in our group discussion, and someone said that they hadn't realized until later that they only needed to iterate through half of the input. Instead they used something like this:
 
 ```python
 def is_palindrome(text):
@@ -39,15 +39,18 @@ def is_palindrome(text):
     return True
 ```
 
-With the same input as above, `i` is going to be each number in the range of 0 to the entire length of `text`, `0...10`.
+With the same input of `1234554321`, `i` is going to be assigned each number in the range of 0 to the entire length of `text`, which is `0...10`.
 
-Okay, so the thing is that despite this being a toy example, addressing the problem of "given an input, how many times do I need to do something" is a very real consideration for real programs. And these same basic ideas that we've already covered are the same ideas for real programs: Do I need to go through the entire input one time? Can I get away with only going through half of the input?
+I should point out that, despite these all being toy examples, addressing the problem of "Given an input, how many times do I need to do something" is a real-life consideration for real-life programs. And these same basic ideas that we've already covered are the same:
 
-These are really common, and there are a few terms you should be aware that people use to talk about them. For this example, where the function has to iterate through the entirety of the input, they say that it has a **linear** time complexity (or run-time). Linear, because the larger your input, the larger the time complexity. The "Big O" notation for this is `O(n)`.
+- Do I need to go through the entire input one time?
+- Can I get away with only going through half of the input?
+
+There are a few terms you should be aware of that people use to talk about them. For the example above where the function has to iterate through the entirety of the input, they say that it has a **linear** time complexity (or run-time). Linear, because the larger your input, the larger the time complexity. The "Big O" notation for this is `O(n)`.
 
 For the first example, where you only have to go through half of the input, the Big O notation is `O(n/2)`.
 
-One thing that doesn't seem obvious at first, is when you have to go through the input a set number of times. Take this example, with this input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
+One thing that doesn't seem obvious at first, is that when you have to go through `n` a set number of times, they usually drop the constant. Take this example, with this input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
 ```python
 def print_twice(numbers):
@@ -58,9 +61,11 @@ def print_twice(numbers):
         print(num)
 ```
 
-It has to go through the input twice. So it would be `O(2n)`. If you ask any CS person, they will point out that constants (the `2` in this case) aren't very important when talking about really big numbers. Regardless of that, what you and I need to know for practical purposes (and interviews) is that they drop constants. So for this example the time complexity would still be `O(n)`.
+It has to go through the input twice. So it would be `O(2n)`. If you ask any CS person, they will point out that constants (the `2` in this case) aren't very important when talking about really big numbers.
 
-However, in _this_ example, with the same input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
+Regardless of that, what you and I need to know for practical purposes like interviews, is that we don't include the constants in Big O. So for this example the time complexity would still be `O(n)`.
+
+Now, take _this_ example, with the same input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
 ```python
 def bubble_sort(numbers):
@@ -76,12 +81,12 @@ def bubble_sort(numbers):
 
 `i` is going to start of at `0`, and then `k` will go through the loop. Then `i` will become `1`, and `k` will going through the loop, etc.
 
-Now it's `O(n-squared)`, which is called "quadratic".
+So now it's `O(n-squared)`, which is called "quadratic".
 
 There are common benchmarks for different types of algorithms, namely sorting and searching. I'll cover searching when we go over [Problem2](https://github.com/reeddunkle/Codjo/tree/master/Problem2_Sorted_Search), and we'll do sorting in the near future. You should be aware that [Bubble Sort is notoriously bad](https://youtu.be/k4RRi_ntQc8).
 
 
-Another common concept is "constant time", which is written in Big O as `O(1)`. This means that regardless of the size of the input, your function only has to do a set, contstant number of operations.
+Another common one is "constant time", which is written as `O(1)`. This means that regardless of the size of the input, your function only has to do a set, constant number of operations.
 
 Here's a short, pointless example using the same input as above, `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
