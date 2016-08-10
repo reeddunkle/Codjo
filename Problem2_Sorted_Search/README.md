@@ -5,7 +5,9 @@ Description
 
 This challenge is different than most coding challenges. In order to expand the sorts of challenges we do, I want to make sure that we cover some algorithms you'll be expected to know about and be able to code in order to solve other problems in the future, such as in an interview.
 
-The problem is: **Given a sorted list of positive integers, and an element x, return the index number of that element in the list. If element is not present, return `-1`.**
+Here's the problem:
+
+>**Given a sorted list of positive integers, and an element x, return the index number of that element in the list. If element is not present, return `-1`.**
 
 We have to search a lot in coding. This week's problem covers one of the staple searching algorithms. I'm not going to reveal the name of the algorithm for now, because it is so common that Google will have coding solutions as well as explanations.
 
