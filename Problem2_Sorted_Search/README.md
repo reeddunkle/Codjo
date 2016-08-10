@@ -3,7 +3,19 @@
 Description
 ----
 
-Searching is something we have to do a lot. How can we do it efficiently?
+This challenge is different than most coding challenges. In order to expand the sorts of challenges we do, I want to make sure that we cover some algorithms you'll be expected to know about and be able to code in order to solve other problems in the future, such as in an interview.
+
+The problem is: **Given a sorted list of positive integers, and an element x, return the index number of that element in the list. If element is not present, return `-1`.**
+
+We have to search a lot in coding. This week's problem covers one of the staple searching algorithms. I'm not going to reveal the name of the algorithm for now, because it is so common that Google will have coding solutions as well as explanations.
+
+Instead, I want you to think about the problem. Think hard about it, and see if you can come up with some ideas on how to increase performance.
+
+Unfortunately, the tests I've written don't test your function's performance. You could return an element's index by simply looping over the entire list until you find it. You could use Python's built-in `index()` method.
+
+I've provided tests to help you get started. But the real challenge, rather than passing the tests, is to come up with the best way to pass the tests.
+
+There aren't that many ways to go about this problem. If you're banging your head against the wall, go ahead and Google for searching algorithms. Try not to peek at any code solutions, though. Just read what you're supposed to do, and spend the time figuring out how to code it.
 
 
 Input Format
