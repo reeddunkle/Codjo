@@ -2,12 +2,8 @@
 
 
 **Team 1**
-- Cristina @yosola (PT)
-- Tamrat @tamrat (ET)
-
-**Team 2**
 - Stephan @smsalleyne (ET)
-- Reed @reeddunkle (ET)
+- Tamrat @tamrat (ET)
 
 **Team 3**
 - Paul @paulitheism (ET or CT)
