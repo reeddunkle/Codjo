@@ -5,4 +5,4 @@ The key to all of this is that the sequence is sorted. This means that with each
 
 Before I give away the answer, see if you can find the correlation between the sequence being sorted, being able to elminiate half of the search space with each calculation.
 
-Note: This isn't dividing the search space by two...it's finding the logarithm of the search space!
+Note: This doesn't just divide the search space by two...reduces it to the logarithm of the search space!
