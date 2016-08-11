@@ -34,7 +34,7 @@ Return a single integer that represents the index at which the input element x o
 Explicit Goals
 ----
 
-During the code review for [Problem1](https://github.com/reeddunkle/Codjo/tree/master/Problem1_Richie_Rich) we talked about optimizing for time and space. In the References directory I wrote an [explaination of these concepts](https://github.com/reeddunkle/Codjo/blob/master/References/Optimizing.md) (5-min read), and included are terms which I'll use for this problem like "linear time". The first goal is to read that.
+During the code review for [Problem1](https://github.com/reeddunkle/Codjo/tree/master/Problem1_Richie_Rich) we talked about optimizing for time and space. In the References directory I wrote an [explaination](https://github.com/reeddunkle/Codjo/blob/master/References/Optimizing.md) of these concepts (5-min read), and included are terms which I'll use for this problem like "linear time". The first goal is to read that.
 
 This is first an exercise in problem solving. Finding an element in a list in linear time is pretty straight forward. You loop through the list until you find it. This isn't a bad place to start, though. This is goal number 2.
 
