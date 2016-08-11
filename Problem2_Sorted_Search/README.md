@@ -38,7 +38,7 @@ During the code review for [Problem1](https://github.com/reeddunkle/Codjo/tree/m
 
 This is first an exercise in problem solving. Finding an element in a list in linear time is pretty straight forward. You loop through the list until you find it. This isn't a bad place to start, though. This is goal number 2.
 
-In this problem I challenge you to learn a better way. That's goal number 3, and the true goal of this problem.. I'll publish some hints in the upcoming days if you can't think of how you could do this.
+In this problem I challenge you to learn a better way. That's goal number 3, and the main goal of this problem. I'll publish some hints in the upcoming days if you can't think of how you could do this.
 
 
 1. Read this 5-min read on [Optimization](https://github.com/reeddunkle/Codjo/blob/master/References/Optimizing.md)
