@@ -1,5 +1,3 @@
-<meta property="og:image" content="http://i.imgur.com/k1t1bGF.jpg" />
-
 # Codjo
 
 <img src="http://i.imgur.com/k1t1bGF.jpg" />
