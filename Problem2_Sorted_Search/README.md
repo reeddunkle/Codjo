@@ -42,8 +42,8 @@ In this problem I challenge you to learn a better way. That's goal number 3, and
 
 
 1. Read this 5-min read on [Optimization](https://github.com/reeddunkle/Codjo/blob/master/References/Optimizing.md)
-2. Find the index in `listy` at which element x occurs
-**3. Look for a way to do this in less than linear time (`O(n)`)**
+2. Find the index in `listy` at which element x occurs <br/>
+**3. Look for a way to do this in less than linear time: `O(n)`**
 4. Write well-named functions and variables
 5. (Don't use the `index` method)
 
