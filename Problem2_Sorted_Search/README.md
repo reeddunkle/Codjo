@@ -34,16 +34,19 @@ Return a single integer that represents the index at which the input element x o
 Explicit Goals
 ----
 
-This is first an exercise in problem solving. Finding an element in a list in linear time is pretty straight forward. You go through the list until you find it, right?
+During the code review for [Problem1](https://github.com/reeddunkle/Codjo/tree/master/Problem1_Richie_Rich) we talked about optimizing for time and space. In the References directory I wrote an [explaination of these concepts](https://github.com/reeddunkle/Codjo/blob/master/References/Optimizing.md) (5-min read), and included are terms which I'll use for this problem like "linear time". The first goal is to read that.
 
-The challenge is to learn a better way. I'll publish some hints in the upcoming days if you can't think of how you could do this.
+This is first an exercise in problem solving. Finding an element in a list in linear time is pretty straight forward. You loop through the list until you find it. This isn't a bad place to start, though. This is goal number 2.
 
-During the code review for [Problem1](https://github.com/reeddunkle/Codjo/tree/master/Problem1_Richie_Rich) we talked about optimizing for time and space. In the [references](https://github.com/reeddunkle/Codjo/tree/master/References) directory, I've published an article explaining these concepts, and some of the terms I'll use for this problem, like "linear run-time".
+In this problem I challenge you to learn a better way. That's goal number 3, and the true goal of this problem.. I'll publish some hints in the upcoming days if you can't think of how you could do this.
 
-1. Find the index in `listy` at which element x occurs
-2. Look for a way to do this in less than N (linear) run-time (`O(n)`)
-3. Write well-named functions and variables
-4. (Don't use the `index` method)
+
+1. Read this 5-min read on [Optimization](https://github.com/reeddunkle/Codjo/blob/master/References/Optimizing.md)
+2. Find the index in `listy` at which element x occurs
+**3. Look for a way to do this in less than linear time (`O(n)`)**
+4. Write well-named functions and variables
+5. (Don't use the `index` method)
+
 
 Extra Goals
 ----
