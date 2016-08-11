@@ -17,6 +17,7 @@ Unfortunately, the tests I've written don't test your function's performance. Yo
 
 I've provided tests to help you get started. But the real challenge, rather than passing the tests, is to come up with the best way to pass the tests.
 
+**Hint:**
 There aren't that many ways to go about this problem. If you're banging your head against the wall, go ahead and Google for searching algorithms. Try not to peek at any code solutions, though. Just read what you're supposed to do, and spend the time figuring out how to code it.
 
 
@@ -38,7 +39,7 @@ During the code review for [Problem1](https://github.com/reeddunkle/Codjo/tree/m
 
 This is first an exercise in problem solving. Finding an element in a list in linear time is pretty straight forward. You loop through the list until you find it. This isn't a bad place to start, though. This is goal number 2.
 
-In this problem I challenge you to learn a better way. That's goal number 3, and the main goal of this problem. I'll publish some hints in the upcoming days if you can't think of how you could do this.
+In this problem I challenge you to learn a better way. That's goal number 3, and the main goal of this problem.
 
 
 1. Read this 5-min read on [Optimization](https://github.com/reeddunkle/Codjo/blob/master/References/Optimizing.md)
