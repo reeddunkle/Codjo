@@ -1,4 +1,5 @@
-# Binary Search
+Hint 2: Binary Search
+----
 
 Yes, binary search! That's the key to this problem. I strongly recommend that before you Google for it and find code examples, you try to implement it based off of this explanation:
 
