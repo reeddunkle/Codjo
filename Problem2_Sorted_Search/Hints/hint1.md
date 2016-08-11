@@ -1,4 +1,8 @@
 Hint 1
 ----
 
-Because the sequence is sorted, with each comparison you can eliminate half of the search space. By doing this repeatedly, you will eventually be left with a search space consisting of a single element: the target value!
+The key to all of this is that the sequence is sorted. This means that with each comparison you can eliminate half of the search space. By doing this repeatedly, you will eventually be left with a search space consisting of a single element: the target value.
+
+Before I give away the answer, see if you can find the correlation between the sequence being sorted, being able to elminiate half of the search space with each calculation.
+
+Note: This isn't dividing the search space by two...it's finding the logarithm of the search space!
