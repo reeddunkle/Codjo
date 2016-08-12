@@ -18,7 +18,7 @@ This is what we're getting at when we talk about an algorithm's "complexity".
 Complexity
 ----
 
-Borrowing from the above definition, we can say that an algorithm's complexity measures how the function responds when you change the input size. The goal of optimizing, then, is to reduce that response.
+Borrowing from the above definition, we can say that an algorithm's complexity measures how the function responds when you change the input size, which is another way of defining its performance. The goal of optimizing, then, is to reduce that response and improve its performance.
 
 
 Time
@@ -66,7 +66,7 @@ In the first example you only have to iterate _n/2_ times, so you would think th
 
 Reducing your iterations to _n/2_ is definitely better. But it is still classified as growing linearly with its input.
 
-Take this example, with the input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
+Here's a similar example, with the input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
 ```python
 def print_twice(numbers):
@@ -77,11 +77,11 @@ def print_twice(numbers):
         print(num)
 ```
 
-Each for-loop requires _n_ iterations, and there are two for-loops, so you might assume its complexity would be `O(2n)`. It isn't, however, it's still just `O(n)`.
+Each for-loop requires _n_ iterations, and there are two for-loops, and it seems like its time complexity would be `O(2n)`. It isn't, however, it's still just `O(n)`.
 
-When I've asked someone to explain this, they point out that constants aren't very important when talking about really big numbers. This is true, but I think this answer is rather unsatisfying, and that it overlooks the goal of this sort of analysis.
+When I've asked someone to explain this, they point out that constants aren't very important when talking about really big numbers. This is true, but I think this answer is rather unsatisfying, and that it misses part of the goal with this sort of analysis.
 
-A better explanation, in my opinion, is to point out that we're concerned with how the function responds to different inputs. When you frame it like this, it's easier to see that we can drop the constant, because the constant doesn't change with the input.
+An important part of the explanation, in my opinion, is that we're concerned with how the function responds to different inputs. When you frame it like this, it's easier to see that we can drop the constant, because the constant doesn't change with the input.
 
 Now, take _this_ example, with the same input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
