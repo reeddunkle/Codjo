@@ -2,7 +2,7 @@
 
 During the code review for [Problem1](https://github.com/reeddunkle/Codjo/tree/master/Problem1_Richie_Rich) we mentioned the idea of optimizing. You'll hear people talk about this all the time, and I'd like to demystify it and help you improve your code.
 
-**Note:** I'm going to be using Python3. For the Python2 equivalent, instead of using `range` you should use `xrange`.
+**Note:** In my examples I'm using Python3. For the Python2 equivalent, use `xrange` instead of `range`.
 
 Big O
 ----
