@@ -64,8 +64,6 @@ There are a few more terms that people use when talking about a function's compl
 
 In the first example you only have to iterate _n/2_ times, so you would think that its complexity is `O(n/2)`. However, we're measuring how fast the complexity grows with its input, and it grows linearly. This isn't obvious at all.
 
-Reducing your iterations to _n/2_ is definitely better. But it is still classified as growing linearly with its input.
-
 Here's a similar example, with the input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
 ```python
@@ -79,9 +77,9 @@ def print_twice(numbers):
 
 Each for-loop requires _n_ iterations, and there are two for-loops, and it seems like its time complexity would be `O(2n)`. It isn't, however, it's still just `O(n)`.
 
-When I've asked someone to explain this, they point out that constants aren't very important when talking about really big numbers. This is true, but I think this answer is rather unsatisfying, and that it misses part of the goal with this sort of analysis.
+When I've asked someone to explain this, they point out that constants aren't very important when talking about really big numbers. This is true, but I think this answer is a bit unsatisfying, and that it misses part of what we're trying to analyze.
 
-An important part of the explanation, in my opinion, is that we're concerned with how the function responds to different inputs. When you frame it like this, it's easier to see that we can drop the constant, because the constant doesn't change with the input.
+An important part of our goal is to measure how the function responds to different inputs. When you frame it like this, it's easier to see that we can drop the constant because the constant doesn't change with the input.
 
 Now, take _this_ example, with the same input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
@@ -99,12 +97,18 @@ def bubble_sort(numbers):
 
 `i` is going to start of at `0`, and then `k` will go through the loop. Then `i` will become `1`, and `k` will going through the loop, etc.
 
-So now it's `O(n-squared)`, which grows at a quadratic rate.
+This is `O(n²)`, which grows at a **quadratic** rate.
 
-There are common benchmarks for different types of algorithms, namely sorting and searching. I'll cover searching when we go over [Problem2](https://github.com/reeddunkle/Codjo/tree/master/Problem2_Sorted_Search), and we'll do sorting in the near future. You should be aware that [Bubble Sort is notoriously bad](https://youtu.be/k4RRi_ntQc8).
+To clear up some of this confusion, Leo said:
+> In absolute efficiency terms, _n/2_ iterations is preferable to _2n_, and the former should definitely be used over the latter. But in relative terms, they grow at more or less the same speed, which means that they are both preferable (at some point) over _n²_.
 
 
-Another common complexity you'll hear is "constant", which is written as `O(1)`. This means no matter how the input changes, your function only has to do a set, constant number of operations.
+There are common benchmarks for different types of algorithms. For example, searching through a sorted list can be performed in **logarithmic** time, `O(log(n))`. I'll cover this when we go over [Problem2](https://github.com/reeddunkle/Codjo/tree/master/Problem2_Sorted_Search).
+
+We'll do sorting algorithms in the near future. For now, you should be aware that [Bubble Sort is notoriously bad](https://youtu.be/k4RRi_ntQc8) at `O(n²)`, and that better algorithms achieve `O(n log(n))`.
+
+
+The last one I'm going to cover before talking about space complexity is **constant**, which is `O(1)`. This means no matter how the input changes, your function's performance is contant.
 
 Here's a short, pointless example using the same input as above, `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
@@ -115,9 +119,6 @@ def print_first_five(numbers):
 ```
 
 It wouldn't matter if the input were 200 instead of 10. It's just going to print the first five numbers in the list. This function's complexity responds to changes in input size at a constant rate, `O(1)`.
-
-Before moving on to space, I want to point out two more common time complexities: `O(log(n))` and `O(n log(n))`. The first is the goal for searching, as in Problem2, and the second is the goal for sorting. We'll talk about these more in the upcoming weeks.
-
 
 
 Space
