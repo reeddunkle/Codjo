@@ -130,7 +130,7 @@ Space
 
 Space complexity is talked about in the same way as time complexity.
 
-Your function's space complexity refers to how much simultaneous memory your function requires. You want to measure how your function's space requirements change as you change the input size. Therefore we look at how much memory your function uses in addition to the initial input.
+Your function's space complexity refers to how your function's space requirements change as you change the input size.
 
 I'll go through some simple examples. For all of them, let's assume the input is still `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`.
 
