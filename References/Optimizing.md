@@ -122,7 +122,7 @@ def print_first_five(numbers):
         print(numbers[i])
 ```
 
-It wouldn't matter if the input were 200 instead of 10. It's just going to print the first five numbers in the list. This function's complexity responds to changes in input size at a constant rate, `O(1)`.
+It wouldn't matter if the input size were 200 instead of 10. It's just going to print the first five numbers in the list. This function's complexity responds to changes in input size at a constant rate, `O(1)`.
 
 
 Space
