@@ -77,11 +77,15 @@ def print_twice(numbers):
 
 Each for-loop requires _n_ iterations, and there are two for-loops, and it seems like its time complexity would be `O(2n)`. It isn't, however, it's still just `O(n)`.
 
-When I've asked someone to explain this, they point out that constants aren't very important when talking about really big numbers. This is true, but I think this answer is a bit unsatisfying, and that it misses part of what we're trying to analyze.
+When I've asked people to explain this, they point out that constants aren't very important when talking about really big numbers:
 
-An important part of our goal is to measure how the function responds to different inputs. When you frame it like this, it's easier to see that we can drop the constant because the constant doesn't change with the input.
+> You want to use big O when thinking about how the performance is going to change with big (really big) inputs. There will be a point where _n²_ might be as good as, say, _100n_, but at some point when the input size changes enough, it will start to be worse.
 
-Now, take _this_ example, with the same input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
+This is true, but I think this answer is a little unsatisfying. It misses part of what we're trying to analyze.
+
+We want to measure how the function responds to different inputs, how it _changes_. When you frame it like this, it's easier to see that we can drop the constant because the constant doesn't change with the input.
+
+Now take this example with the same input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
 ```python
 def bubble_sort(numbers):
