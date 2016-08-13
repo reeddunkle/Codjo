@@ -57,7 +57,7 @@ class SortedSearchTests(unittest.TestCase):
         self.assertEqual(999999, find(x, listy))
 
 
-    @unittest.skip('Extra Credit: No __len__ method.')
+    # @unittest.skip('Extra Credit: No __len__ method.')
     def test_no_length_method(self):
         listy = Listy(list(range(200)))
         x = 100

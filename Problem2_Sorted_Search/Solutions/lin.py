@@ -11,9 +11,11 @@ class NoLengthMethod(Exception):
 class Listy(list):
     def __len__(self):
         raise NoLengthMethod('No __len__ method found.')
+
     def element_at(self, i):
         try:
             return self.__getitem__(i)
+
         except IndexError:
             return -1
 
@@ -28,30 +30,34 @@ def my_len(listy):
     index = 0
     left = left_num(listy, index)
     right = right_num(listy, index)
+
     while left < right:
         index = index + 1
         left = left_num(listy, index)
         right = right_num(listy, index)
+
     if left == right:
         if left_num(listy, index+1) == right_num(listy, index+1):
-            return (index+1)*2
+            return (index + 1) * 2
         else:
-            return index*2+1
+            return (index * 2) + 1
     else:
-        return index*2
+        return index * 2
 
 def find(num, alist):
     listy = Listy(alist)
     index = 0
     left = left_num(listy, index)
     right = right_num(listy, index)
+
     while left <= right and left != -1:
         if left == num:
             return index
         elif right == num:
-            return my_len(listy) - 1 - index ###It would be easy to call the len(), but since I chose not to use the len() function, I coded the my_len() and used it to get the length.
+            return my_len(listy) - 1 - index
         else:
             index = index + 1
             left = left_num(listy, index)
             right = right_num(listy, index)
+
     return -1
