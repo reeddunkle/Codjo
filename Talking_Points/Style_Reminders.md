@@ -3,7 +3,7 @@
 
 I've made a lot of similar style suggestions during the code reviews. When someone says "Make this code more readable," it sounds like a good thing to do and I'll nod along with them. But practically I'd rather see concrete examples of what they mean, and so I thought I'd document some of the examples we've gone over.
 
-**I believe that code should be written to be as predictable as possible.**
+**I believe that code should be as predictable as possible.**
 
 Everything I've suggested works toward that goal. Here are some specific examples of refactoring we did to reduce the code and make it more readable.
 
