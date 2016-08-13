@@ -27,7 +27,7 @@ You should maintain the same habits throughout your code. That makes it more pre
 Logic
 ----
 
-All things equal, your code should be have a logical flow to it. If you're parsing an array, start with the left side and move to the right. If you're declaring the three variables, `low` `mid` and `high`, declare them in that order.
+All things equal, your code should be have a logical flow to it. If you're parsing an array, start with the left side and move to the right. If you're declaring the three variables, `low`, `mid`, and `high`, declare them in that order.
 
 Here's an example from one of the code snippets below. It begins by initalizing these variables:
 
