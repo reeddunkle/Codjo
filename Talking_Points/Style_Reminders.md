@@ -1,5 +1,5 @@
 
-# _Style_
+# _Styyyyle_
 
 **I believe that code should be as predictable as possible.**
 
@@ -8,11 +8,11 @@ I've made a lot of similar style suggestions during the code reviews, and everyt
 Spacing
 ----
 
-Code is easier to read with spaces added between the lines. My goal is to visually space code into logical parts.
+Code is easier to read when it's spaced out. My goal is to space code into visually logical parts.
 
 Good inline spacing also improves code. [PEP8](https://www.python.org/dev/peps/pep-0008/#code-lay-out) has a lot to say about this.
 
-I also think that inline spacing should be consistent throughout the code. For example, one of the code snippets below has this line...
+For example, I think that inline spacing should be consistent throughout the code. One of the code snippets below has this line...
 
 ```
 right = lst[-1-index]
@@ -24,25 +24,30 @@ right = lst[-1-index]
 right = lst[-1 - index]
 ```
 
-You should maintain the same habits throughout your code, because it will make it more predictable.
+You should maintain the same habits throughout your code. That makes it more predictable.
 
 Logic
 ----
 
 All things equal, your code should be have a logical flow to it. If you're parsing an array, start with the left side and move to the right. If you're declaring the three variables, `low` `mid` and `high`, declare them in that order.
 
-For example, one of the code snippets below initalizes the variables like this:
+Here's an example from one of the code snippets below. It begins by initalizing these variables:
 
 ```python
 max_value = len(array)
 min_value = 0
 ```
 
-This'll make me sound super fussy, but I think it reads more logically to _first_ declare the `min_value` and _then_ declare the `max_value`.
+This'll make me sound super fussy, but I think it reads more logically to _first_ declare the `min_value` and _then_ declare the `max_value`:
 
-About 15 years ago I read the annotated version of the first three _Dragonlance_ books. One of the annotations made a point that's stuck with me, and is relevant here. They said that a science fiction writer can create anything, any kind of world. And so they have a responsibility to balance their invented concepts with regular, terrestrial concepts so as to not overload the reader.
+```python
+min_value = 0
+max_value = len(array)
+```
 
-We have the same responsibility and far less room for creativity. Have I said it too many times already? You want your code to be as predictable as possible.
+About 15 years ago I read the annotated version of the first three _Dragonlance_ books. One of the annotations made a point that's stuck with me, and it's relevant here. They said that a science fiction writer can create anything, any kind of world, and so they have a responsibility to balance their invented concepts with regular, terrestrial concepts so as to not overload the reader.
+
+We have the same responsibility. Have I said it too many times already? You want your code to be as predictable as possible:
 
 > "The problem is that people just want to fix their bugs and move on. [...] As I talked about in '[Applying neuroscience to software development](http://chrismm.com/blog/how-to-use-your-full-brain-when-writing-code/)', when people have to digest your piece of code, their 'mental stack' fills up and it is hard to make progress."
 > [Writing Good Code: how to reduce the cognitive load of your code](http://chrismm.com/blog/writing-good-code-reduce-the-cognitive-load/) by Christian Maioli Mackeprang
