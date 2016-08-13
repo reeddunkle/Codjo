@@ -8,9 +8,7 @@ I've made a lot of similar style suggestions during the code reviews, and everyt
 Spacing
 ----
 
-Code is easier to read when it's spaced out. My goal is to space code into visually logical parts.
-
-Good inline spacing also improves code. [PEP8](https://www.python.org/dev/peps/pep-0008/#code-lay-out) has a lot to say about this.
+Code is easier to read when it's spaced out. My goal is to space code into visually logical parts, including its inline spacing. [PEP8](https://www.python.org/dev/peps/pep-0008/#code-lay-out) has a lot to say about this.
 
 For example, I think that inline spacing should be consistent throughout the code. One of the code snippets below has this line...
 
