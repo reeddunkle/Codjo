@@ -174,7 +174,9 @@ def binary_search(element, listy, low, high):
 
 This is how we solved it last night. And so this was our final code:
 
-<br/>
+
+Final Solution
+----
 
 ```python
 def find(element, listy):
