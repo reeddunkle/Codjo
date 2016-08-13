@@ -132,7 +132,7 @@ def binary_search(element, listy, low, high):
 
 There's a bug. See if you can spot it?
 
-
+```
 .
 .
 .
@@ -148,6 +148,7 @@ There's a bug. See if you can spot it?
 .
 .
 .
+```
 
 Spoiler:
 
