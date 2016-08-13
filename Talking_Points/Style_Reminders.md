@@ -48,7 +48,7 @@ About 15 years ago I read the annotated version of the first three _Dragonlance_
 We have the same responsibility. Have I said it too many times already? You want your code to be as predictable as possible:
 
 > "The problem is that people just want to fix their bugs and move on. [...] As I talked about in '[Applying neuroscience to software development](http://chrismm.com/blog/how-to-use-your-full-brain-when-writing-code/)', when people have to digest your piece of code, their 'mental stack' fills up and it is hard to make progress."
-    >     ---- [Writing Good Code: how to reduce the cognitive load of your code](http://chrismm.com/blog/writing-good-code-reduce-the-cognitive-load/) by Christian Maioli Mackeprang
+>     ――[Writing Good Code: how to reduce the cognitive load of your code](http://chrismm.com/blog/writing-good-code-reduce-the-cognitive-load/) by Christian Maioli Mackeprang
 
 ----
 
