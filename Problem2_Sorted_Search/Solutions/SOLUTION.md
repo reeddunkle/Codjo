@@ -66,11 +66,11 @@ def binary_search(x, listy, low, high):
         if middle == x:
             return mid
 
-        elif middle < x:
-            low = mid + 1
+        elif middle > element:
+            high = mid - 1
 
         else:
-            high = mid - 1
+            low = mid + 1
 
     return -1
 ```
