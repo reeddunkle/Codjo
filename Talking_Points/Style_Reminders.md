@@ -1,12 +1,11 @@
 
 # _Style_
 
-I've made a lot of similar style suggestions during the code reviews. When someone says "Make this code more readable," it sounds like a good thing to do and I'll nod along with them. But practically I'd rather see concrete examples of what they mean, and so I thought I'd document some of the examples we've gone over.
+I've made a lot of similar style suggestions during the code reviews. When someone says "Make this code more readable," it sounds like a good thing to do and I'll nod along with them. But practically I'd rather hear about and see concrete examples, so I thought I'd document what we've talked about, and show examples of the refactoring we've done.
 
 **I believe that code should be as predictable as possible.**
 
-Everything I've suggested works toward that goal. Here are some specific examples of refactoring we did to reduce the code and make it more readable.
-
+Everything that I've said during the code reviews works towards this goal. First I'll reiterate what I've said about spacing and logic in regards to code style, and then I'll show some specific examples of refactoring we did.
 
 Spacing
 ----
