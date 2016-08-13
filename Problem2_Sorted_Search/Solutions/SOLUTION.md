@@ -207,7 +207,7 @@ That's it. Let me know if you can break it!
 
 ----
 
-At the end, we also made a recursive version of `binary_search`:
+Before we finished we also made a recursive version of `binary_search`:
 
 ```
 def binary_search(element, listy, low, high):
