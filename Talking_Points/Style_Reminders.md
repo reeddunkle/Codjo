@@ -91,21 +91,21 @@ def length(lst):
 **Before**
 
 ```python
-def find(target,listy):
-    size = len(listy)
+def find(target,arr):  # Space after the comma
+    size = len(arr)
     if size == 0:
         return -1
     mid = size//2  # Space this out
     hi = size-1  # Space this out
     lo = 0
-    while target != listy[mid] and lo <= hi:
-        if target < listy[mid]:
+    while target != arr[mid] and lo <= hi:
+        if target < arr[mid]:
             hi = mid - 1
             mid = (hi+lo) // 2  # Space out the addition
-        if target > listy[mid]:
+        if target > arr[mid]:
             lo = mid + 1
             mid = (hi+lo) //2  # Space out the addition
-    if target == listy[mid]:
+    if target == arr[mid]:
         return mid
     else:
         return -1
@@ -114,8 +114,8 @@ def find(target,listy):
 **After**
 
 ```python
-def find(target,listy):
-    size = len(listy)
+def find(target, arr):
+    size = len(arr)
     if size == 0:
         return -1
 
@@ -123,16 +123,16 @@ def find(target,listy):
     hi = size - 1
     lo = 0
 
-    while target != listy[mid] and lo <= hi:
-        if target < listy[mid]:
+    while target != arr[mid] and lo <= hi:
+        if target < arr[mid]:
             hi = mid - 1
             mid = (hi + lo) // 2
 
-        if target >  listy[mid]:
+        if target >  arr[mid]:
             lo = mid + 1
             mid = (hi + lo) // 2
 
-    if target == listy[mid]:
+    if target == arr[mid]:
         return mid
     else:
         return -1
