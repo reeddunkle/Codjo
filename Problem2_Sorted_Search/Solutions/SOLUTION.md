@@ -209,7 +209,7 @@ That's it. Let me know if you can break it!
 
 Before we finished we also made a recursive version of `binary_search`:
 
-```
+```python
 def binary_search(element, listy, low, high):
     mid = (low + high) // 2
 
