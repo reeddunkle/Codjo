@@ -151,30 +151,30 @@ def binary_search(element, lst):
         pointer = (max_index - min_index)//2 + min_index
         if lst == []:
             return -1
-        elif lst[pointer] == x:
+        elif lst[pointer] == element:
             return pointer
         elif abs(max_index - min_index) <= 1: #we've run out of list to check!
             return -1
-        elif lst[pointer] > x:
+        elif lst[pointer] > element:
             max_index = pointer
-        elif lst[pointer] < x:
+        elif lst[pointer] < element:
             min_index = pointer
 ```
 
 **After**
 
 ```python
-def find(x, listy):
+def binary_search(element, lst):
     min_index = 0
-    max_index = len(listy)
+    max_index = len(lst)
 
     while min_index < max_index:
         pointer = (min_index + max_index) // 2
 
-        if listy[pointer] == x:
+        if lst[pointer] == element:
             return pointer
 
-        elif listy[pointer] > x:
+        elif lst[pointer] > element:
             max_index = pointer
 
         else:
