@@ -1,57 +1,7 @@
+13 Aug 2016
+----
 
-def find(element, listy):
-    index = 1
-
-    while listy.element_at(index) != -1 and listy.element_at(index) < element:
-        index *= 2
-
-    return binary_search(element, listy, index // 2, index)
-
-
-def binary_search(element, listy, low, high):
-    mid = (low + high) // 2
-
-    if low > high:
-        return -1
-
-    middle = listy.element_at(mid)
-
-    if middle == element:
-        return mid
-
-    if middle > element or middle == -1:
-        high = mid - 1
-    else:
-        low = mid + 1
-
-    return binary_search(element, listy, low, high)
-
-
-
-def my_len(listy):
-
-    if listy.element_at(0) != -1:
-        low = 0
-        high = 1
-
-        while listy.element_at(high) != -1:
-            high, low = high * 2, high
-
-# high = 8
-# low = 4
-        while low <= high:
-            mid = (low + high) // 2
-            middle = listy.element_at(mid)
-
-            if listy.element_at(mid) != -1:
-                low = mid + 1
-
-            else:
-                high = mid
-
-
-    return 0
-
+Here are the solutions we talked about during Friday's code review.
 
 Binary Search
 ----
