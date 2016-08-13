@@ -90,7 +90,7 @@ def find(element, listy):
 
 At this point, we could ignore `low`, and just call `binary_search` like this:
 
-```
+```python
 return binary_search(element, listy, 0, high)
 ```
 
@@ -132,7 +132,7 @@ def binary_search(element, listy, low, high):
 
 There's a bug. See if you can spot it?
 
-```
+
 .
 .
 .
@@ -147,11 +147,11 @@ There's a bug. See if you can spot it?
 .
 .
 .
-```
+.
 
 Spoiler:
 
-`high` could be an index that is out of range, and will return `-1`. Because we know that all of the list's integers are positive, we can treat `-1` as a number that's greater than and not equal to element, and add a check:
+`high` could be an index that is out of range, and will return `-1`. Because we know that all of the list's integers are positive, we can treat `-1` as a number that's greater than and not equal to element, and check for that condition:
 
 ```python
 def binary_search(element, listy, low, high):
@@ -162,7 +162,7 @@ def binary_search(element, listy, low, high):
         if middle == element:
             return mid
 
-        elif middle > element or middle == -1:
+        elif middle > element or middle == -1:  # -1 means mid is too high also
             high = mid - 1
 
         else:
@@ -171,29 +171,9 @@ def binary_search(element, listy, low, high):
     return -1
 ```
 
-This is how we solved it last night. As I'm writing this, though, I see another, possibly simpler solution to handling that "bug" above. We could check if `element` is less than `middle` first, rather than checking if it is greater than `middle` first, and use and `else` to cover the case of `middle` being greater than `element` or equal to `-1`:
+This is how we solved it last night. And this was our final code:
 
-```python
-def binary_search(element, listy, low, high):
-    while low <= high:
-        mid = (low + high) // 2
-        middle = listy.element_at(mid)
-
-        if middle == element:
-            return mid
-
-        elif middle < element:
-            low = mid + 1
-
-        else:
-            high = mid - 1
-
-    return -1
-```
-
-This feels hacky, because `-1` is definitely less than `element`, so it would throw our function out of whack. But I think we're safe because `low` will always be less than or equal to `high`, and only `high` can return `-1`.
-
-Our final code is:
+<br/>
 
 ```python
 def find(element, listy):
@@ -214,11 +194,11 @@ def binary_search(element, listy, low, high):
         if middle == element:
             return mid
 
-        elif middle < element:
-            low = mid + 1
+        elif middle > element or middle == -1:  # -1 means mid is too high also
+            high = mid - 1
 
         else:
-            high = mid - 1
+            low = mid + 1
 
     return -1
 ```
@@ -227,7 +207,7 @@ That's it. Let me know if you can break it!
 
 ----
 
-At the end, we also made a recursive version of `binary_search`. Here's the code:
+At the end, we also made a recursive version of `binary_search`:
 
 ```
 def binary_search(element, listy, low, high):
