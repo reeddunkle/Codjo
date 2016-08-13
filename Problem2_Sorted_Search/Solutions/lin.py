@@ -30,12 +30,10 @@ def my_len(listy):
     index = 0
     left = left_num(listy, index)
     right = right_num(listy, index)
-
     while left < right:
         index = index + 1
         left = left_num(listy, index)
         right = right_num(listy, index)
-
     if left == right:
         if left_num(listy, index+1) == right_num(listy, index+1):
             return (index + 1) * 2
