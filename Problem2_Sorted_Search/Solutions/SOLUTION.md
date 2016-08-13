@@ -172,7 +172,7 @@ def binary_search(element, listy, low, high):
     return -1
 ```
 
-This is how we solved it last night. And this was our final code:
+This is how we solved it last night. And so this was our final code:
 
 <br/>
 
