@@ -3,14 +3,21 @@
 
 **I believe that code should be as predictable as possible.**
 
-I've made a lot of similar style suggestions during the code reviews, and everything that I've said aims at predictability. First I'll reiterate what I've said about spacing and logic in regards to code style, and then I'll show some specific examples of refactoring we did.
+I've made a lot of similar style suggestions during the code reviews, and
+everything that I've said aims at predictability. First I'll reiterate what
+I've said about spacing and logic in regards to code style, and then I'll
+show some specific examples of refactoring we did.
 
 Spacing
 ----
 
-Code is easier to read when it's spaced out. My goal is to space code into visually logical parts, including its inline spacing. [PEP8](https://www.python.org/dev/peps/pep-0008/#code-lay-out) has a lot to say about this.
+Code is easier to read when it's spaced out. My goal is to space code into
+visually logical parts, including its inline
+spacing. [PEP8](https://www.python.org/dev/peps/pep-0008/#code-lay-out) has
+a lot to say about this.
 
-For example, I think that inline spacing should be consistent throughout the code. One of the code snippets below has this line...
+For example, I think that inline spacing should be consistent throughout
+the code. One of the code snippets below has this line...
 
 ```
 right = lst[-1-index]
@@ -22,12 +29,23 @@ right = lst[-1-index]
 right = lst[-1 - index]
 ```
 
-You should maintain the same habits throughout your code. That makes it more predictable.
+You should maintain the same habits throughout your code. That makes it
+more predictable.  Consistency brings predictability because because if
+I've seen `-1-index` once before and I see it again, I won't look twice as
+I already know what that snippet does.  But if I first see `-1-index` and
+then I see the different `-1 - index`, which is doing the same thing but
+written differently, I might have to stop and look again to convince me
+that it actually does the same thing.
+
 
 Logic
 ----
 
-All things equal, your code should be have a logical flow to it. If you're parsing an array, start with the left side and move to the right. If you're declaring the three variables, `low`, `mid`, and `high`, declare them in that order.
+All things equal, your code should be have a logical flow to it.  If you're
+parsing an array, start with the left side and move to the right (if you're
+in most of the Western hemisphere).  If you're declaring the three
+variables, `low`, `mid`, and `high`, declare them in order: either
+`low`-`mid`-`high` or `high`-`mid`-`low`.
 
 Here's an example from one of the code snippets below. It begins by initalizing these variables:
 
