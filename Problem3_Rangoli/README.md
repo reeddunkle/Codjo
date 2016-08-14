@@ -71,7 +71,7 @@ Print the alphabet rangoli in the format explained above.
 Explicit Challenge
 ----
 
-There are no tests this week. Just make it work, and write it the best you can.
+There are no tests* this week. Just make it work, and write it the best you can.
 
 You should:
 
@@ -79,6 +79,8 @@ You should:
 2. Make pretty things
 3. Write pretty code
 4. Remember the things we've gone over
+
+*You can submit your code to the [HackerRank](https://www.hackerrank.com/challenges/alphabet-rangoli) challenge if you want to run their tests.
 
 Extra Challenge
 ----
