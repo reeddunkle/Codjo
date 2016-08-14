@@ -1,7 +1,7 @@
 # Teams
 
 
-**Unassigned**
+**Participating**
 - Tamrat @tamrat (ET)
 - Stephan @smsalleyne (ET)
 - Khalid @khalid (UK, 5 hours ahead of ET)
