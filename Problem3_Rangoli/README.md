@@ -214,6 +214,7 @@ z-y-x-z-y-x-z-y-x-y-z-x-y-z-x-y-z
 ----------------z----------------
 ```
 
+<img src="http://i.imgur.com/2PTW7sY.gif" />
 ----
 
 Taken from [this](https://www.hackerrank.com/challenges/alphabet-rangoli) HackerRank problem
