@@ -1,7 +1,5 @@
 # Let's talk!
 
-<div style="text-align:center><img align="middle" src="http://i.imgur.com/XuLp79U.jpg"></div>
-
 I want to maintain a dialogue about what we're trying to improve about the Codjo because, like all things RC, it's an experiment.
 
 Here are a few things I'd like to improve.
