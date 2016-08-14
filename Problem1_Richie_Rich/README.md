@@ -22,14 +22,14 @@ Output Format
 Return a single palindrome number that can be made by changing no more than k digits; if this is not possible, return `-1`.
 
 
-Explicit Goals
+Explicit Challenge
 ----
 
 - Make the number a palindrome by changing no more than k digits
 - Write clean code
 - Optimize your code
 
-Extra Goals
+Extra Challenge
 ----
 
 - How could you maximize the output number?
