@@ -68,7 +68,7 @@ Output Format
 
 Print the alphabet rangoli in the format explained above.
 
-Explicit Goals
+Explicit Challenge
 ----
 
 There are no tests this week. Just make it work, and write it the best you can.
@@ -80,7 +80,7 @@ You should:
 3. Write pretty code
 4. Remember the things we've gone over
 
-Extra Goals
+Extra Challenge
 ----
 
 Write your function so that it accepts any string `s` as input, where `len(s) > 0`, from which it builds its patterns.
@@ -88,10 +88,7 @@ Write your function so that it accepts any string `s` as input, where `len(s) > 
 Post screenshots of any cool designs you make!
 
 
-**Constraints**
-Let _n_ be any `n > 0`.
-
-If `n > len(s)` repeat from the beginning of `s`.
+For the extra challenge, let _n_ be any `n > 0`. If `n > len(s)` repeat from the beginning of `s`.
 
 Example Input 1:
 
