@@ -211,3 +211,7 @@ z-y-x-z-y-x-z-y-x-y-z-x-y-z-x-y-z
 --------------z-y-z--------------
 ----------------z----------------
 ```
+
+----
+
+Taken from [this](https://www.hackerrank.com/challenges/alphabet-rangoli) HackerRank problem
