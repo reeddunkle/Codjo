@@ -7,11 +7,11 @@ Here are a few things I'd like to improve.
 Test Cases
 ----
 
-During the code review for Problem2 (12 August 2016) it became apparent that I need to write better test cases. One idea for improving this was to appeal to all of you. While you're working on your code, if you come up with a test case that breaks your code, and it's one that I'm not testing for, please let me know! PM me, make a pull-request, anything. I want to have harder, better test cases.
+During the code review for Problem2 (12 August 2016) it became apparent that I need to write better test cases. One idea for improving this is to appeal to all of you. While you're working on your code, if you come up with a test case that breaks your code, and it's one that I'm not testing for, please let me know! PM me, make a pull-request, anything. I want to have harder, better test cases.
 
 This is a bit backwards, I realize. Ideally my test cases would cover all of the corner cases in order to catch your code's shortcomings. My test cases ought to improve the quality of your code, in other words. Instead I'm asking you to use your code to help me improve the quality of my test cases. And at the end of the day, my test cases only matter insofar as they help you improve your code.
 
-So it's imperfect. As things stand, though, my test cases are far from perfect, and I'm imagining that by crowd-sourcing some of the test writing we can improve the overall quality of everyone's code. One of you will think of a test that helps all of us.
+So it's imperfect. As things stand, though, my test cases are far from perfect, and I'm imagining that by crowd-sourcing some of the test writing we can improve the overall quality of everyone's code. One person can think of a test that helps everyone.
 
 
 Code Review
