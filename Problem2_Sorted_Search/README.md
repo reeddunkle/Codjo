@@ -32,7 +32,7 @@ Output Format
 
 Return a single integer that represents the index at which the input element x occurs in the input `listy`. If element x is not in `listy`, return `-1`.
 
-Explicit Goals
+Explicit Challenge
 ----
 
 During the code review for [Problem1](https://github.com/reeddunkle/Codjo/tree/master/Problem1_Richie_Rich) we talked about optimizing for time and space. In the `Talking_Points` directory I wrote an [explaination](https://github.com/reeddunkle/Codjo/blob/master/Talking_Points/Optimizing.md) of these concepts (7-min read), and included are terms which I'll use for this problem like "linear time". The first goal is to read that.
@@ -49,7 +49,7 @@ In this problem I challenge you to learn a better way. That's goal number 3, and
 5. (Don't use the `index` method)
 
 
-Extra Goals
+Extra Challenge
 ----
 
 Imagine that `listy` is not a normal list structure, but a modified structure that has no `__len__` method. By this I mean that you can't call `len()` on `listy`. Instead, `listy` has a method called `element_at(i)` method, which returns the element at index `i` in `O(1)` time. If `i` is beyond the bounds of the data structure, it returns `-1`. (For this reason, `listy` only supports positive integers.) Can you use `element_at(i)` to complete the challenge above while still keeping the run-time below `O(n)`?
