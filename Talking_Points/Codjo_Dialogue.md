@@ -1,6 +1,6 @@
 # Let's talk!
 
-<img src="http://i.imgur.com/XuLp79U.jpg" align="middle"/>
+<img align="middle" src="http://i.imgur.com/XuLp79U.jpg">
 
 I want to maintain a dialogue about what we're trying to improve about the Codjo because, like all things RC, it's an experiment.
 
