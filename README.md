@@ -11,4 +11,4 @@
 
 And at the end of the week we'll do a live code-review session and try to learn as much as we can from each other.
 
-Join the #codjo channel in RC Start Slack Team
+Join the [#codjo](https://rcstart.slack.com/archives/codjo) channel in RC Start Slack Team
