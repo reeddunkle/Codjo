@@ -20,6 +20,8 @@ We can say that an algorithm's complexity measures how the function responds whe
 Time Complexity
 ----
 
+#### Linear
+
 Look at this example of `is_palindrome` from [Problem1's tests](https://github.com/reeddunkle/Codjo/blob/master/Problem1_Richie_Rich/richie_rich_test.py):
 
 ```python
@@ -35,9 +37,9 @@ During the code review I went over how much time the function requires, and I us
 
 To measure its time complexity, I asked, "How does the function respond to inputs of different sizes?"
 
-Let's say the input to `is_palindrome` is `1234554321`, and so `len(text) == 10`. Before it completes, the for-loop will assign to `i` the numbers `0, 1, 2, 3, 4`
+Let's say the input to `is_palindrome` is `"1234554321"`, and so `len(text) == 10`. Before it completes, the for-loop will assign to `i` the numbers `0, 1, 2, 3, 4`
 
-If _N_ represents the size (length) of the input, in the **worst case** scenario this function needs to loop _N/2_ times.
+If _N_ represents the size (length) of the input, in the worst case scenario this function needs to loop _N/2_ times.
 
 When this came up in our discussion, someone said that they hadn't realized until later that they only needed to iterate through half of the input. Instead they used something like this:
 
@@ -52,11 +54,13 @@ def is_palindrome(text):
 
 With the same input, the function now needs to loop _N_ times (where _N_ is the size of the input).
 
-Despite these being toy examples, addressing this problem of "Given an input, how many times do I need to do something?" is a real-life consideration for real-life programs.
+There are a few more terms I'll introduce that people use when talking about complexity.
 
-There are a few more terms that people use when talking about a function's complexity. For the example above where the function has to iterate _N_ times, they say that it has a **linear** time complexity (or runtime), because the time complexity grows linearly with its input size. The "Big O" notation for this is `O(N)`.
+In the example above, where the function has to iterate _N_ times, they say that it has a **linear** time complexity (or runtime), because the time complexity grows linearly with its input size. The "Big O" notation for this is `O(N)`.
 
-Now take this example with the same input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
+#### Quadratic
+
+Now take this example with the input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
 ```python
 def bubble_sort(numbers):
@@ -68,7 +72,7 @@ def bubble_sort(numbers):
     return numbers
 ```
 
-`numbers` has a length of 10, so `i` will be assigned each number from `0...10`, and `k` will also be assigned each number from `0...10`. The catch is that `k` is going to perform `n` operations for every one of `i`.
+`numbers` has a length of 10, so `i` will be assigned each number from `0...10`, and `k` will also be assigned each number from `0...10`. The catch is that `k` is going to perform _N_ operations for every one of `i`.
 
 `i` is going to start of at `0`, and then `k` will go through the loop. Then `i` will become `1`, and `k` will going through the loop, etc.
 
@@ -112,6 +116,8 @@ We just need to accept that it doesn't mean that `O(N)` is always better than `O
 
 In absolute efficiency terms, _N/2_ iterations is preferable to _2N_, and the former should definitely be used over the latter. But in relative terms, they grow at more or less the same speed, which means that they are both preferable (at some point) over _N²_.
 
+#### Constant
+
 The last one I'm going to cover before talking about space complexity is **constant**, which is `O(1)`. This means no matter how the input changes, your function's performance is contant.
 
 Here's a short, pointless example using the same input as above, `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
@@ -124,15 +130,19 @@ def print_first_five(numbers):
 
 It wouldn't matter if the input size were 200 instead of 10. It's just going to print the first five numbers in the list. This function's complexity responds to changes in input size at a constant rate, `O(1)`.
 
-#### A note on what's to come:
+#### Logarthmic and "Linearithmic"
 
 There are common benchmarks for different types of algorithms that are worth learning.
 
 For example, if your input is sorted, you can use binary search to find an element in **logarithmic** time, `O(log(N))`. We covered this in [Problem2](https://github.com/reeddunkle/Codjo/tree/master/Problem2_Sorted_Search).
 
-We'll do sorting algorithms in the near future, but you should be aware that [Bubble Sort is notoriously bad](https://youtu.be/k4RRi_ntQc8) at `O(N²)`. Better algorithms like quick sort and merge sort achieve `O(N log(N))`.
+We'll do sorting algorithms in the near future, but you should be aware that [Bubble Sort is notoriously bad](https://youtu.be/k4RRi_ntQc8) at `O(N²)`. Better algorithms like quick sort and merge sort achieve `O(N log(N))`. [Some people](https://en.wikipedia.org/wiki/Time_complexity#Linearithmic_time) call `O(N log(N))` "linearithmic" as shorthand. Personally, I just say "N log N".
 
-Beware of `O(N²)` and `O(2ⁿ)` in interviews! That's usually a red flag, and indicates that they want you try to improve the code.
+#### Exponential
+
+`O(2ⁿ)` complexity is called **exponential**.
+
+**Note:** Beware of `O(N²)` and `O(2ⁿ)` in interviews! That's usually a red flag, and indicates that they want you try to improve the code.
 
 #### Best Case, Worst Case, and Expected Case
 
