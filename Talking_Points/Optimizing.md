@@ -140,9 +140,18 @@ We'll do sorting algorithms in the near future, but you should be aware that [Bu
 
 #### Exponential
 
-`O(2ⁿ)` complexity is called **exponential**.
+`O(2ⁿ)` complexity is called **exponential**. An example is a recursive Fibonacci function:
 
-**Note:** Beware of `O(N²)` and `O(2ⁿ)` in interviews! That's usually a red flag, and indicates that they want you try to improve the code.
+```python
+def fib(n):
+    '''Returns the first n Fibonacci numbers.'''
+    if n <= 1:
+        return n
+
+    return fib(n - 2) + fib(n - 1)
+```
+
+**Note:** Beware of `O(N²)` and `O(2ⁿ)` in interviews! That's usually a red flag, and indicates that there is room for improvement.
 
 #### Best Case, Worst Case, and Expected Case
 
