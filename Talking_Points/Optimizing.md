@@ -1,24 +1,20 @@
 # Optimizing
 
-During the code review for [Problem1](https://github.com/reeddunkle/Codjo/tree/master/Problem1_Richie_Rich) we talked about optimizing. I'd like to demystify these terms and help you improve your code.
+During the code reviews we inevitably end up talking about ways to optimize your code. I'm going to explain different concepts, and point out things to beware of to help you write better code.
 
 **Note:** In my examples I'm using Python3. For the Python2 equivalent, use `xrange` instead of `range`.
 
 Big O
 ----
 
-You've heard people talk about "big O notation". It's used to indicate how an algorithm responds to different input sizes.
+If you've joined in the code reviews, you've heard us talk about "big O notation". It's used to indicate how an algorithm responds to different input sizes:
 
 [Wikipedia](https://en.wikipedia.org/wiki/Big_O_notation):
 > In computer science, big O notation is used to classify algorithms by how they respond to changes in input size, such as how the processing time of an algorithm changes as the problem size becomes extremely large.
 
 This is what we mean when we talk about an algorithm's "complexity". We want to measure at what rate the algorithm grows when we change the input size.
 
-
-Complexity
-----
-
-Borrowing from the above definition, we can say that an algorithm's complexity measures how the function responds when you change the input size, which is another way of defining its performance. The goal of optimizing, then, is to reduce that response and improve its performance.
+We can say that an algorithm's complexity measures how the function responds when you change the input size, which is another way of defining its performance. The goal of optimizing, then, is to reduce that response and improve its performance.
 
 
 Time Complexity
@@ -35,7 +31,7 @@ def is_palindrome(text):
     return True
 ```
 
-During the code review I brought up this idea of how much time the function requires, and I used the terms "time complexity", and "run time". These describe the same thing.
+During the code review I went over how much time the function requires, and I used the terms "time complexity", and "runtime". These describe the same thing.
 
 To measure its time complexity, I asked, "How does the function respond to inputs of different sizes?"
 
@@ -58,7 +54,7 @@ With the same input, the function now needs to loop _N_ times (where _N_ is the 
 
 Despite these being toy examples, addressing this problem of "Given an input, how many times do I need to do something?" is a real-life consideration for real-life programs.
 
-There are a few more terms that people use when talking about a function's complexity. For the example above where the function has to iterate _N_ times, they say that it has a **linear** time complexity (or run-time), because the time complexity grows linearly with its input size. The "Big O" notation for this is `O(N)`.
+There are a few more terms that people use when talking about a function's complexity. For the example above where the function has to iterate _N_ times, they say that it has a **linear** time complexity (or runtime), because the time complexity grows linearly with its input size. The "Big O" notation for this is `O(N)`.
 
 Now take this example with the same input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
@@ -226,7 +222,7 @@ Time vs. Space
 
 It's common to find time and space competing with one another. People in every field talk about "design trade-offs". In CS, there tends to be a trade-off between time and space. You definitely want to minimize both, but at some level you'll probably find yourself facing design trade-offs.
 
-An example where you face a trade-off is with caching. A cache holds in memory some information that you've already spent time calculating, in order to speed up retrieving that information the next time you want it. Given the same input, it spares you the run-time. In other words, you're using extra space to increase speed.
+An example where you face a trade-off is with caching. A cache holds in memory some information that you've already spent time calculating, in order to speed up retrieving that information the next time you want it. Given the same input, it spares you the runtime. In other words, you're using extra space to increase speed.
 
 At one end of the spectrum, you could imagine a cache that holds the result of every calculation your function might perform. Its space complexity would be infinite, but its time complexity given this (idealistic) cache could be constant.
 
