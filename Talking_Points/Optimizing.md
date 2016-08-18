@@ -54,9 +54,7 @@ def is_palindrome(text):
 
 With the same input, the function now needs to loop _N_ times (where _N_ is the size of the input).
 
-There are a few more terms I'll introduce that people use when talking about complexity.
-
-In the example above, where the function has to iterate _N_ times, they say that it has a **linear** time complexity (or runtime), because the time complexity grows linearly with its input size. The "Big O" notation for this is `O(N)`.
+This runtime has a **linear** growth. The "Big O" notation for this is `O(N)`.
 
 #### Quadratic
 
@@ -155,7 +153,7 @@ def fib(n):
 
 #### Best Case, Worst Case, and Expected Case
 
-Back to the example of _is_palindrome_ one last time:
+Back to the example of `is_palindrome` one last time:
 
 ```python
 def is_palindrome(text):
@@ -166,9 +164,9 @@ def is_palindrome(text):
     return True
 ```
 
-You might point out that this function could exit the loop midway with its `return False` statement, and you're right. It could exit with the first calculation even and get `O(1)`.
+You might point out that this function could exit the loop midway with its `return False` statement, and you're right. It could even exit with the first calculation and achieve `O(1)`.
 
-You can describe your complexity in three different ways:
+We can describe complexity in three different ways:
 - **best case**
 - **worst case**
 - **expected case**.
@@ -180,11 +178,11 @@ As for distinguishing between expected and worst case, I haven't found a satisfy
 This is Gayle Laakmann McDowell's explanation in _Cracking the Coding Interview_:
 > For many—probably most—algorithms, the worst case and the expected case are the same. Sometimes they're different, though, and we need to describe both of the runtimes.
 
-Just before she says this, she explains the best, worst, and expected runtimes for quick sort (`O(N)`, `O(N²)`, and `O(N log(N))` respectively). Usually, people describe quick sort's big O as `O(N log(N))`.
+Just before she says this, she explains the best, worst, and expected runtimes for quick sort (`O(N)`, `O(N²)`, and `O(N log(N))` respectively). Usually, people describe quick sort's big O as `O(N log(N))`, which is its expected time.
 
 On the other hand, with `is_palindrome`, no one would think to calculate its expected case by averaging the best and the worst. They would just say that the expected is the same as the worst.
 
-For now, forgive my less-than-perfect explanation.
+For now, forgive this less-than-perfect explanation.
 
 
 Space Complexity
@@ -194,7 +192,7 @@ Space complexity is talked about in the same way as time complexity.
 
 Your function's space complexity refers to how your function's space requirements change as you change the input size.
 
-I'll go through some simple examples. For all of them, let's assume the input is still `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`.
+I'll go through some simple examples. For all of them, let's assume the input is `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`.
 
 First, two examples of constant space:
 
@@ -221,9 +219,9 @@ def bubble_sort(numbers):
     return numbers
 ```
 
-The first function creates a new list and adds the first five numbers from the input to it. No matter how large `numbers` is, the function only requires a constant 5-length list to be held in memory.
+The first function creates a new list and adds the first five numbers from the input. No matter how large `numbers` is, the function only requires a constant 5-length list to be held in memory.
 
-`bubble_sort` on the other hand requires no additional memory. It destroys the original input by mutating it in place (which is something you'll hear people criticize), but in return it doesn't take up any additional space.
+`bubble_sort` on the other hand requires no additional memory. It destroys the original input by mutating it in place (which is often criticized), but in return it doesn't take up any additional space.
 
 **`O(N)`**
 
@@ -244,8 +242,8 @@ Time vs. Space
 
 It's common to find time and space competing with one another. People in every field talk about "design trade-offs". In CS, there tends to be a trade-off between time and space. You definitely want to minimize both, but at some level you'll probably find yourself facing design trade-offs.
 
-An example where you face a trade-off is with caching. A cache holds in memory some information that you've already spent time calculating, in order to speed up retrieving that information the next time you want it. Given the same input, it spares you the runtime. In other words, you're using extra space to increase speed.
+An example where you face a trade-off is with caching. In order to speed up retrieving information,  a cache stores some information that you've already spent time calculating. This way, if the same information is requested (if you have the same input) you can skip running the calculations and just grab the answer you have stored. Given the same input, it spares you the runtime. The trade off is that you're using extra space to decrease your runtime.
 
-At one end of the spectrum, you could imagine a cache that holds the result of every calculation your function might perform. Its space complexity would be infinite, but its time complexity given this (idealistic) cache could be constant.
+At one end of the spectrum, you could imagine a cache that holds the result of every calculation your function might perform. Its space complexity would be infinite, but its time complexity given this idealistic cache would be constant.
 
-On the other end of the spectrum, imagine that there is no cache, and so your function has to run its calculations every time. You save space at the cost of time.
+On the other end of the spectrum, imagine that there is no cache, and so your function has to run its calculations every time. You don't incur any extra space, but you have to run a calculation with every input.
