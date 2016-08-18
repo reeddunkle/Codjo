@@ -166,22 +166,25 @@ def is_palindrome(text):
     return True
 ```
 
-You might point out that this function could exit the loop midway with its `return False` statement, and you're right. It could exit with the first calculation even and get an `O(1)` in the best case.
+You might point out that this function could exit the loop midway with its `return False` statement, and you're right. It could exit with the first calculation even and get `O(1)`.
 
-You can actually describe your complexity in three different ways, **best case**, **worst case**, and **expected case**.
+You can describe your complexity in three different ways:
+- **best case**
+- **worst case**
+- **expected case**.
 
 Usually, people don't talk about best case time complexity. It isn't that useful.
 
-As for distinguishing between expected and worst case, I haven't read a good explanation yet.
+As for distinguishing between expected and worst case, I haven't found a satisfying explanation yet.
 
 This is Gayle Laakmann McDowell's explanation in _Cracking the Coding Interview_:
 > For many—probably most—algorithms, the worst case and the expected case are the same. Sometimes they're different, though, and we need to describe both of the runtimes.
 
-Just before she says this, she explains the best, worst, and expected runtimes for quick sort (`O(N)`, `O(N²)`, and `O(N log(N))` respectively). The number people care about with quick sort is almost always `O(N log(N))`.
+Just before she says this, she explains the best, worst, and expected runtimes for quick sort (`O(N)`, `O(N²)`, and `O(N log(N))` respectively). Usually, people describe quick sort's big O as `O(N log(N))`.
 
-On the other hand, with `is_palindrome`, no one would think to calculate an expected case by averaging the best and the worst. They would just say that the expected is the same as the worst.
+On the other hand, with `is_palindrome`, no one would think to calculate its expected case by averaging the best and the worst. They would just say that the expected is the same as the worst.
 
-For now, forgive my less-than-perfect explanation of this. At least you're aware of this, if you weren't before.
+For now, forgive my less-than-perfect explanation.
 
 
 Space Complexity
