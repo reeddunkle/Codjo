@@ -3,19 +3,21 @@
 Foreword
 ----
 
-In writing this, I've read a lot of different explanations of these topics. Every one of them made these concepts feels very academic, and stuffy. And a lot of them made mistakes.
+In writing this, I've read a lot of different explanations of these topics [which topics?]. Every one of them made these concepts feel very academic, and stuffy. And a lot of them made mistakes.
 
-Up until now, I was following suit, trying to dutifully cover each concept the way that I learned them myself. I'm going to try something new.
+Up until now, I was following suit, trying to dutifully cover each concept the way that I learned it myself. I'm going to try something new.
 
 A substantial percentage of you all are here because you want to get a programming job one day. And a substantial subset of you don't have CS degrees or engineering degrees.
 
-I'm going to write this for you, those of you who want to learn as much as you can, but want to focus on learning first what you need to get hired — those of us who need to hack the process a bit.
+I'm going to write this for you, those of you who want to learn as much as you can, but want to focus on learning first what you need to get hired — those of you who need to hack the process a bit.
 
-There is another percentage of you who are in school, or happy in your current field, and perhaps are participating in this primarily for the educational aspect. To you, I promise to not write anything that I'm not confident is correct. And it will be worth supplementing what I'm going to write, with a more traditional explanation, which you can find anywhere by Googling these terms.
+There is another percentage of you who are in school, or happy in your current field, and perhaps are participating in this primarily for the educational aspect. To you, I promise not to write anything that I'm not confident is correct. And it will be worth supplementing what I'm going to write with a more traditional explanation, which you can find anywhere by Googling these terms.
 
-The interview process will usually have you writing code at some point. It will have you working through an algorithm at some point. And it will have you discussing your code and your algorithm process with your interviewer.
+The interview process will usually have you writing code at some point. It will have you working through an algorithm at some point. And it will have you discussing your code and your [thinking?] process with your interviewer.
 
 Yes, you want to optimize your code for its own sake. But for now, I'm going to focus on optimizing to get you a job, and it will get you well on your way to writing better code for its own sake.
+
+[I feel like this intro could be just a tad shorter...]
 
 Contents
 ----
@@ -26,7 +28,7 @@ You need to know enough to be able to talk about this stuff with an interviewer,
 
 In Part 1, I'm going to get the worst part out of the way first. I'll introduce the topics, and provide explanations and code examples. This part will be more academic and boring. Just read it, take in as much as you can for now. This part will help you "talk shop" with an interviewer (and your peers after you get hired). You'll want to know this stuff, but for now don't let it bog you down too much.
 
-In [Part 2](https://github.com/reeddunkle/Codjo/blob/master/Talking_Points/Optimizing_Part2.md), there will be a re-cap, a cheat-sheet of sorts. I will pair code samples with terms so that you can spot the patterns. This is going to be incomplete. The thing to focus on are the sorts of common methods and loops that we write everyday, so that when you're writing you know what to avoid.
+In [Part 2](https://github.com/reeddunkle/Codjo/blob/master/Talking_Points/Optimizing_Part2.md), there will be a re-cap, a cheat-sheet of sorts. I will pair code samples with terms so that you can spot the patterns. This is going to be incomplete. The things to focus on are the sorts of common methods and loops that we write everyday, so that when you're writing you know what to avoid.
 
 **Note:** In my examples I'm using Python3. For the Python2 equivalent, use `xrange` instead of `range`.
 
@@ -38,7 +40,7 @@ Big O notation is used to indicate how an algorithm responds to different input 
 [Wikipedia](https://en.wikipedia.org/wiki/Big_O_notation):
 > In computer science, big O notation is used to classify algorithms by how they respond to changes in input size, such as how the processing time of an algorithm changes as the problem size becomes extremely large.
 
-When we talk about an algorithm's complexity, we want to describe at what rate the algorithm grows when we change the input size. The goal of optimizing is to reduce that response and improve its performance.
+When we talk about an algorithm's complexity, we want to describe at what rate the time to complete the algorithm increases when we change the size of the inputs. The goal of optimizing is to reduce that response and improve performance.
 
 The notation looks like this: `O(N)`, `O(1)`. (That's only two examples.)
 
@@ -61,7 +63,7 @@ def is_palindrome(text):
 
 During the code review I went over how much time the function requires, and I used the terms "time complexity", and "runtime". These describe the same thing.
 
-To measure its time complexity, we talked about it responds to inputs of different sizes.
+To measure time complexity, we talked about how the algorithm responds to inputs of different sizes.
 
 If the input is `"1234554321"`, it's length is 10: `len(text) == 10`.
 
@@ -84,6 +86,8 @@ With the same input, the function now needs to loop _N_ times (where _N_ is the 
 
 This runtime has a **linear** growth rate. The "Big O" notation for linear is `O(N)`.
 
+[You might also want to mention how constants are usually ignored, i.e., N/2 is the same as N]
+
 #### Quadratic — `O(N²)`
 
 Now take this example with the input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
@@ -100,7 +104,9 @@ def bubble_sort(numbers):
 
 `numbers` has a length of 10, so `i` will be assigned each number from `0...10`, and `k` will also be assigned each number from `0...10`. The catch is that `k` is going to perform _N_ operations for every one of `i`.
 
-`i` is going to start of at `0`, and then `k` will go through the loop. Then `i` will become `1`, and `k` will going through the loop, etc.
+`i` is going to start of at `0`, and then `k` will go through the loop - that is, k will take on values from `0...10`. Then `i` will become `1`, and `k` will again take on values from `0...10`, continuing until `i` becomes `10`.
+
+[For each of the 10 iterations of i, we did 10 iterations of k - that is 10*10 == 100 ...something like that]
 
 This is `O(N²)`, which grows at a **quadratic** rate.
 
@@ -145,6 +151,8 @@ We just need to accept that it doesn't mean that `O(N)` is always better than `O
 In absolute efficiency terms, _N/2_ iterations is preferable to _2N_, and the former should definitely be used over the latter. But in relative terms, they grow at more or less the same speed, which means that they are both preferable (at some point) over _N²_.
 
 The main takeaway from this is to drop the constants when you're talking to an interviewer. Best case, you'll sound like an amateur. Worst case, the interviewer will treat this as a "gotcha".
+
+[Oh okay...maybe move this up :)]
 
 #### Constant — `O(1)`
 
