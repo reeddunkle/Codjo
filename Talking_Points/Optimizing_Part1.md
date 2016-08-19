@@ -16,7 +16,7 @@ Contents
 
 These topics — complexity, optimization, and "big O" — are notoriously confusing for beginners. They feel intimidating, confusing, and ambiguous. That's OK. It's normal. For now, just learn to be okay with those feelings.
 
-You need to know enough to be able to talk about this stuff with an interviewer, and to be able to spot and improve costly code, so, in this part I'm going to go over that first. I'll introduce the topics, and provide explanations and code examples. This part will be a tad more academic and boring. Just read it and take in as much as you can for now. This will help you "talk shop" with an interviewer. You'll want to know this stuff more thoroughly in the future, but for now don't let it bog you down too much.
+You need to know enough to be able to talk about this stuff with an interviewer, and to be able to spot and improve costly code, so in this part I'm going to go over that first. I'll introduce the topics, and provide explanations and code examples. This part will be a tad more academic and boring. Just read it and take in as much as you can for now. This will help you "talk shop" with an interviewer. You'll want to know this stuff more thoroughly in the future, but for now don't let it bog you down too much.
 
 In [Part 2](https://github.com/reeddunkle/Codjo/blob/master/Talking_Points/Optimizing_Part2.md), I'll re-cap by providing a list of code examples and their complexities. I'll pair the code with terms so that you can spot the patterns. The list is going to be incomplete. On one hand you want to get a feel for how costly certain coding maneuvers are, and simultaneously you want to learn the benchmark complexities for common algorithms.
 
@@ -30,9 +30,9 @@ Big O notation is used to indicate how an algorithm responds to different input 
 [Wikipedia](https://en.wikipedia.org/wiki/Big_O_notation):
 > In computer science, big O notation is used to classify algorithms by how they respond to changes in input size, such as how the processing time of an algorithm changes as the problem size becomes extremely large.
 
-When we talk about an algorithm's complexity, we want to describe at what rate the time to complete the algorithm increases when we change the size of the inputs. The goal of optimizing is to reduce that response and improve performance.
+Big O is used to describe at what rate the algorithm's complexity increases as we increase the size of the input. The goal of optimizing is to reduce that response and improve performance.
 
-Here are two examples of big O notation: `O(N)`, `O(1)`.
+Two examples of big O notation are `O(N)`, `O(1)`.
 
 
 Time Complexity
