@@ -2,11 +2,11 @@
 
 In [Part 1](https://github.com/reeddunkle/Codjo/blob/master/Talking_Points/Optimizing_Part1.md), I talked through the concepts, and tried to lay a foundation.
 
-In this part I'll just focus on associating the terms with their code. There are countless ways to code certain complexities, so just try to get a feel for what the code is doing, rather than the specific implementation I'm showing.
+In this part I'll just focus on associating the terms with code examples. There are countless ways to code certain complexities, so just try to get a feel for what the code is doing, rather than the specific implementation I'm showing.
 
 This part is a bit of a cheat sheet for interviewing — the terms, the code to avoid, and the code to write. It is incomplete. I'm starting with the common stuff, the "basics", the stuff you're most likely to have to deal with in an interview.
 
-#### Constant — `O(1)`
+### Constant — `O(1)`
 
 **Time**
 
@@ -44,7 +44,7 @@ No matter how large `listy` is, you're only storing a constant number of variabl
 
 Note: Some of you wrote `binary_search` using list-splicing. In Python, list-splicing creates a new copy of the list each time. That means more space each time.
 
-#### Linear — `O(N)`
+### Linear — `O(N)`
 
 **Time**
 
@@ -68,7 +68,7 @@ def square_list(lst):
 
 It stores a new list with the same number of elements.
 
-#### Logarithmic — `O(log(N))`
+### Logarithmic — `O(log(N))`
 
 **Time**
 
@@ -96,7 +96,7 @@ Each iteration, it cuts its search space in half.
 
 Logarithmic space-complexity isn't talked about as much. If you were storing every number (or node, in a binary search tree) you visit, that would be logarithmic space.
 
-#### "Linearithmic" — `O(N log(N))`
+### "Linearithmic" — `O(N log(N))`
 
 **Time**
 
@@ -109,7 +109,7 @@ Examples of `O(N log(N))` time complexity built-in methods are:
 
 Again, `O(N log(N))` space isn't common.
 
-#### Quadratic — `O(N²)`
+### Quadratic — `O(N²)`
 
 **Time**
 
@@ -138,7 +138,7 @@ Each iteration in `make_palindrome` calls `is_palindrome`.
 
 Imagine storing multiple copies of the input.
 
-#### Exponential — `O(2ⁿ)`
+### Exponential — `O(2ⁿ)`
 
 **Time**
 
@@ -158,5 +158,5 @@ Its growth doubles for every 1 of the input.
 The example of `fib` is actually exponential in space complexity also. It creates two copies for every 1 input.
 
 
-#### Interview Notes
+### Interview Notes
 Beware of `O(N²)`, `O(N³)`, `O(N⁴)`, and `O(2ⁿ)` in interviews!
