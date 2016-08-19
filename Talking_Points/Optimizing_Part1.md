@@ -32,7 +32,7 @@ Big O notation is used to indicate how an algorithm responds to different input 
 
 Big O is used to describe at what rate the algorithm's complexity increases as we increase the size of the input. The goal of optimizing is to reduce that response and improve performance.
 
-Two examples of big O notation are `O(N)`, `O(1)`.
+Two examples of big O notation are `O(N)` and `O(1)`.
 
 
 Time Complexity
