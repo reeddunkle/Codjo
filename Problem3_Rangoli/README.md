@@ -3,12 +3,14 @@
 <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Rangoli.jpg" /> -->
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Rangoli_before_and_after_colouring.jpg" />
 
+This week's problem has a little more rhythm and a little less algorithm!
+
 Rangoli is an art form from India in which patterns are created on the floor in living rooms or courtyards using materials such as colored rice, dry flour, colored sand or flower petals.
 
 Description
 ----
 
-This week's challenge is to design a function that prints an alphabet rangoli of size _n_.
+Your challenge is to design a function that prints an alphabet rangoli of size _n_.
 
 Here are some examples:
 
