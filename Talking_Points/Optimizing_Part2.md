@@ -155,7 +155,7 @@ Its growth doubles for every 1 of the input.
 
 **Space**
 
-The example of `fib` is actually exponential in space complexity also. It creates two copies for every 1 input.
+The example of `fib` is actually exponential in space complexity also. It creates two copies in the call stack for every 1 input.
 
 
 ### Interview Notes
