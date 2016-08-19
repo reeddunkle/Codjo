@@ -160,13 +160,13 @@ It's the same for searching in a binary search tree.
 
 ### "Linearithmic" — `O(N log(N))`
 
-We'll go over sorting algorithms in the near future, but you should be aware that my earlier example of [Bubble Sort is notoriously bad](https://youtu.be/k4RRi_ntQc8) (`O(N²)`).
+We'll go over sorting algorithms in the near future, but you should be aware that my earlier example of Bubble Sort is [notoriously bad](https://youtu.be/k4RRi_ntQc8).
 
 Better algorithms like quick sort and merge sort achieve `O(N log(N))`. [Some people](https://en.wikipedia.org/wiki/Time_complexity#Linearithmic_time) call `O(N log(N))` "linearithmic" as shorthand. Personally, I just say "N log N".
 
 ### Exponential — `O(2ⁿ)`
 
-An example of this is a recursive Fibonacci function:
+This recursive Fibonacci function grows at an exponential rate. Its growth doubles for every 1 of the input:
 
 ```python
 def fib(n):
@@ -176,9 +176,6 @@ def fib(n):
 
     return fib(n - 2) + fib(n - 1)
 ```
-
-Its growth doubles for every 1 of the input.
-
 
 ### I didn't mention...
 
@@ -208,7 +205,7 @@ We can describe complexity in three different ways:
 
 Usually, people don't talk about best case time complexity. It isn't that useful.
 
-As for distinguishing between expected and worst case, I haven't found a satisfying explanation yet.
+As for distinguishing between expected and worst case, I haven't found a completely satisfying explanation yet.
 
 This is Gayle Laakmann McDowell's explanation in _Cracking the Coding Interview_:
 > For many—probably most—algorithms, the worst case and the expected case are the same. Sometimes they're different, though, and we need to describe both of the runtimes.
@@ -234,7 +231,7 @@ First, two examples of constant space:
 **`O(1)`**
 
 ```python
-def constant_space(numbers)
+def constant_space(numbers):
     new_list = []
     for i in xrange(5):
         new_list.append(numbers[i])
@@ -261,15 +258,15 @@ The first function creates a new list and adds the first five numbers from the i
 **`O(N)`**
 
 ```python
-def linear_space(numbers)
+def linear_space(numbers):
     new_list = []
-    for i in range(n):
-        new_list.append(numbers[i])
+    for x in numbers:
+        new_list.append(x*2)
 
     return new_list
 ```
 
-This `linear_space` function requires an _n_-length list to be held in memory, as it's simply copying the current input. The larger the input, the larger `new_list` will swell.
+This `linear_space` function requires an _n_-length list to be held in memory, because it's doubling each element from the original input. The larger the input, the larger `new_list` will swell.
 
 
 Time vs. Space
@@ -282,3 +279,7 @@ An example where you face a trade-off is with caching. In order to speed up retr
 At one end of the spectrum, you could imagine a cache that holds the result of every calculation your function might perform. Its space complexity would be infinite, but its time complexity given this idealistic cache would be constant.
 
 On the other end of the spectrum, imagine that there is no cache, and so your function has to run its calculations every time. You don't incur any extra space, but you have to run a calculation with every input.
+
+----
+
+### [GOTO Part 2](https://github.com/reeddunkle/Codjo/blob/master/Talking_Points/Optimizing_Part2.md)
