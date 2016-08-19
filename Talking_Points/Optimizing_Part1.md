@@ -9,7 +9,7 @@ Up until now, I was following suit, trying to dutifully cover each concept the w
 
 A substantial percentage of you all are here because you want to get a programming job one day. And a substantial subset of you don't have CS degrees or engineering degrees.
 
-I'm going to write this for those of you who want to learn as much as you can, but want to focus on learning first what you need to get hired.
+I'm going to write this for those of you who want to learn as much as you can, but who need to focus on learning first what you need to get hired.
 
 Contents
 ----
