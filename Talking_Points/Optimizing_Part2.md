@@ -100,7 +100,7 @@ Logarithmic space-complexity isn't talked about as much. If you were storing eve
 
 **Time**
 
-For now, I'm not going to post code for sorting so that we can cover it in the upcoming weeks. The idea is that you have to go through the entire input, and for each one, you can perform a logarithmic function.
+For now, I'm not going to post code for sorting so that we can cover it in the upcoming weeks. The idea is that you have to go through the entire input, and for each one, you can perform a logarithmic operation.
 
 Examples of `O(N log(N))` time complexity built-in methods are:
 `sorted` and `sort`

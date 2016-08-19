@@ -18,9 +18,9 @@ These topics — complexity, optimization, and "big O" — are notoriously confu
 
 You need to know enough to be able to talk about this stuff with an interviewer, and to be able to spot and improve costly code.
 
-In Part 1, I'm going to get the worst part out of the way first. I'll introduce the topics, and provide explanations and code examples. This part will be more academic and boring. Just read it, take in as much as you can for now. This part will help you "talk shop" with an interviewer (and your peers after you get hired). You'll want to know this stuff, but for now don't let it bog you down too much.
+In this part, I'm going to get the worst out of the way first. I'll introduce the topics, and provide explanations and code examples. This part will be a tad more academic and boring. Just read it and take in as much as you can for now. This will help you "talk shop" with an interviewer. You'll want to know this stuff, but for now don't let it bog you down too much.
 
-In [Part 2](https://github.com/reeddunkle/Codjo/blob/master/Talking_Points/Optimizing_Part2.md), there will be a re-cap, a cheat-sheet of sorts. I will pair code samples with terms so that you can spot the patterns. This is going to be incomplete. The things to focus on are the sorts of common methods and loops that we write everyday, so that when you're writing you know what to avoid.
+In [Part 2](https://github.com/reeddunkle/Codjo/blob/master/Talking_Points/Optimizing_Part2.md), I'll re-cap by providing a list of code examples and their complexities. I'll pair the code with terms so that you can spot the patterns. The list is going to be incomplete. On one hand you want to get a feel for how costly certain coding maneuvers are, and simultaneously you want to learn the benchmark complexities for common algorithms.
 
 **Note:** In my examples I'm using Python3. For the Python2 equivalent, use `xrange` instead of `range`.
 
@@ -144,7 +144,7 @@ This is `O(N²)`, which grows at a **quadratic** rate.
 
 ### Constant — `O(1)`
 
-A **constant** growth rate means that, no matter how the input changes, your function's performance remains contant. It means that its performance doesn't depend on the input size.
+A **constant** growth rate means that, no matter how the input changes, your function's performance remains constant. It means that its performance doesn't depend on the input size.
 
 Here's a short, pointless example using the same input as above, `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
 
@@ -156,7 +156,7 @@ def print_first_five(numbers):
 
 It wouldn't matter if the input size were 200 instead of 10. It's just going to print the first five numbers in the list. This function's complexity responds to changes in input size at a constant rate, `O(1)`.
 
-### Logarthmic — `O(log(N))`
+### Logarithmic — `O(log(N))`
 
 This is the benchmark for searching through a sorted input.
 
