@@ -1,6 +1,6 @@
 # Optimizing — Part 2
 
-In [Part 1](https://github.com/reeddunkle/Codjo/blob/master/Talking_Points/Optimizing_Part1.md) I talked through the concepts, and tried to lay a foundation.
+In [Part 1](https://github.com/reeddunkle/Codjo/blob/master/Talking_Points/Optimizing_Part1.md), I talked through the concepts, and tried to lay a foundation.
 
 In this part I'll just focus on associating the terms with their code. There are countless ways to code certain complexities, so just try to get a feel for what the code is doing, rather than the specific implementation I'm showing.
 

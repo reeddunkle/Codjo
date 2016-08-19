@@ -26,7 +26,7 @@ You need to know enough to be able to talk about this stuff with an interviewer,
 
 In Part 1, I'm going to get the worst part out of the way first. I'll introduce the topics, and provide explanations and code examples. This part will be more academic and boring. Just read it, take in as much as you can for now. This part will help you "talk shop" with an interviewer (and your peers after you get hired). You'll want to know this stuff, but for now don't let it bog you down too much.
 
-In Part 2 there will be a re-cap, a cheat-sheet of sorts. I will pair code samples with terms so that you can spot the patterns. This is going to be incomplete. The thing to focus on are the sorts of common methods and loops that we write everyday, so that when you're writing you know what to avoid.
+In [Part 2](https://github.com/reeddunkle/Codjo/blob/master/Talking_Points/Optimizing_Part2.md), there will be a re-cap, a cheat-sheet of sorts. I will pair code samples with terms so that you can spot the patterns. This is going to be incomplete. The thing to focus on are the sorts of common methods and loops that we write everyday, so that when you're writing you know what to avoid.
 
 **Note:** In my examples I'm using Python3. For the Python2 equivalent, use `xrange` instead of `range`.
 
