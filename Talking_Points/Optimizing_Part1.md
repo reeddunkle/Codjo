@@ -3,19 +3,13 @@
 Foreword
 ----
 
-In writing this, I've read a lot of different explanations of these topics. Every one of them made these concepts feels very academic, and stuffy. And a lot of them made mistakes.
+In writing this, I've read a lot of different explanations of time and space complexity. Every one of them made these concepts feel very academic. A few of them made mistakes.
 
-Up until now, I was following suit, trying to dutifully cover each concept the way that I learned them myself. I'm going to try something new.
+Up until now, I was following suit, trying to dutifully cover each concept the way that I learned it myself. I'm going to try something new.
 
 A substantial percentage of you all are here because you want to get a programming job one day. And a substantial subset of you don't have CS degrees or engineering degrees.
 
-I'm going to write this for you, those of you who want to learn as much as you can, but want to focus on learning first what you need to get hired — those of us who need to hack the process a bit.
-
-There is another percentage of you who are in school, or happy in your current field, and perhaps are participating in this primarily for the educational aspect. To you, I promise to not write anything that I'm not confident is correct. And it will be worth supplementing what I'm going to write, with a more traditional explanation, which you can find anywhere by Googling these terms.
-
-The interview process will usually have you writing code at some point. It will have you working through an algorithm at some point. And it will have you discussing your code and your algorithm process with your interviewer.
-
-Yes, you want to optimize your code for its own sake. But for now, I'm going to focus on optimizing to get you a job, and it will get you well on your way to writing better code for its own sake.
+I'm going to write this for those of you who want to learn as much as you can, but want to focus on learning first what you need to get hired.
 
 Contents
 ----
@@ -26,7 +20,7 @@ You need to know enough to be able to talk about this stuff with an interviewer,
 
 In Part 1, I'm going to get the worst part out of the way first. I'll introduce the topics, and provide explanations and code examples. This part will be more academic and boring. Just read it, take in as much as you can for now. This part will help you "talk shop" with an interviewer (and your peers after you get hired). You'll want to know this stuff, but for now don't let it bog you down too much.
 
-In [Part 2](https://github.com/reeddunkle/Codjo/blob/master/Talking_Points/Optimizing_Part2.md), there will be a re-cap, a cheat-sheet of sorts. I will pair code samples with terms so that you can spot the patterns. This is going to be incomplete. The thing to focus on are the sorts of common methods and loops that we write everyday, so that when you're writing you know what to avoid.
+In [Part 2](https://github.com/reeddunkle/Codjo/blob/master/Talking_Points/Optimizing_Part2.md), there will be a re-cap, a cheat-sheet of sorts. I will pair code samples with terms so that you can spot the patterns. This is going to be incomplete. The things to focus on are the sorts of common methods and loops that we write everyday, so that when you're writing you know what to avoid.
 
 **Note:** In my examples I'm using Python3. For the Python2 equivalent, use `xrange` instead of `range`.
 
@@ -38,15 +32,15 @@ Big O notation is used to indicate how an algorithm responds to different input 
 [Wikipedia](https://en.wikipedia.org/wiki/Big_O_notation):
 > In computer science, big O notation is used to classify algorithms by how they respond to changes in input size, such as how the processing time of an algorithm changes as the problem size becomes extremely large.
 
-When we talk about an algorithm's complexity, we want to describe at what rate the algorithm grows when we change the input size. The goal of optimizing is to reduce that response and improve its performance.
+When we talk about an algorithm's complexity, we want to describe at what rate the time to complete the algorithm increases when we change the size of the inputs. The goal of optimizing is to reduce that response and improve performance.
 
-The notation looks like this: `O(N)`, `O(1)`. (That's only two examples.)
+Here are two examples of big O notation: `O(N)`, `O(1)`.
 
 
 Time Complexity
 ----
 
-#### Linear — `O(N)`
+### Linear — `O(N)`
 
 Look at this example of `is_palindrome` from [Problem1's tests](https://github.com/reeddunkle/Codjo/blob/master/Problem1_Richie_Rich/richie_rich_test.py):
 
@@ -59,9 +53,9 @@ def is_palindrome(text):
     return True
 ```
 
-During the code review I went over how much time the function requires, and I used the terms "time complexity", and "runtime". These describe the same thing.
+During the code review I went over how much time the function requires, and I used the terms "time complexity" and "runtime". Both describe the same thing.
 
-To measure its time complexity, we talked about it responds to inputs of different sizes.
+To measure time complexity, we talked about how the algorithm responds to inputs of different sizes.
 
 If the input is `"1234554321"`, it's length is 10: `len(text) == 10`.
 
@@ -84,29 +78,9 @@ With the same input, the function now needs to loop _N_ times (where _N_ is the 
 
 This runtime has a **linear** growth rate. The "Big O" notation for linear is `O(N)`.
 
-#### Quadratic — `O(N²)`
-
-Now take this example with the input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
-
-```python
-def bubble_sort(numbers):
-    for i in range(len(numbers)):
-        for k in range(len(numbers)):
-            if numbers[i] < numbers[k]:
-                numbers[i], numbers[k] = numbers[k], numbers[i]
-
-    return numbers
-```
-
-`numbers` has a length of 10, so `i` will be assigned each number from `0...10`, and `k` will also be assigned each number from `0...10`. The catch is that `k` is going to perform _N_ operations for every one of `i`.
-
-`i` is going to start of at `0`, and then `k` will go through the loop. Then `i` will become `1`, and `k` will going through the loop, etc.
-
-This is `O(N²)`, which grows at a **quadratic** rate.
-
 #### Drop The Constants
 
-This is counter-intuitive, so pay attention to this part.
+This is counter-intuitive, so pay close attention.
 
 Consider this example:
 
@@ -146,7 +120,29 @@ In absolute efficiency terms, _N/2_ iterations is preferable to _2N_, and the fo
 
 The main takeaway from this is to drop the constants when you're talking to an interviewer. Best case, you'll sound like an amateur. Worst case, the interviewer will treat this as a "gotcha".
 
-#### Constant — `O(1)`
+### Quadratic — `O(N²)`
+
+Now take this example with the input `[0, 4, 6, 3, 2, 7, 5, 1, 8, 8]`:
+
+```python
+def bubble_sort(numbers):
+    for i in range(len(numbers)):
+        for k in range(len(numbers)):
+            if numbers[i] < numbers[k]:
+                numbers[i], numbers[k] = numbers[k], numbers[i]
+
+    return numbers
+```
+
+`numbers` has a length of 10, so `i` will be assigned each number from `0...10`, and `k` will also be assigned each number from `0...10`. The catch is that `k` is going to perform _N_ operations for every one of `i`.
+
+`i` is going to start of at `0`, and then `k` will go through the loop - that is, k will take on values from `0...10`. Then `i` will become `1`, and `k` will again take on values from `0...10`, continuing until `i` becomes `10`.
+
+For each of the 10 iterations of i, we did 10 iterations of k: `10*10 == 10² == 100`
+
+This is `O(N²)`, which grows at a **quadratic** rate.
+
+### Constant — `O(1)`
 
 A **constant** growth rate means that, no matter how the input changes, your function's performance remains contant. It means that its performance doesn't depend on the input size.
 
@@ -160,7 +156,7 @@ def print_first_five(numbers):
 
 It wouldn't matter if the input size were 200 instead of 10. It's just going to print the first five numbers in the list. This function's complexity responds to changes in input size at a constant rate, `O(1)`.
 
-#### Logarthmic — `O(log(N))`
+### Logarthmic — `O(log(N))`
 
 This is the benchmark for searching through a sorted input.
 
@@ -168,13 +164,13 @@ If you need to search for an element, you can use binary search to search throug
 
 It's the same for searching in a binary search tree.
 
-#### "Linearithmic" — `O(N log(N))`
+### "Linearithmic" — `O(N log(N))`
 
 We'll go over sorting algorithms in the near future, but you should be aware that my earlier example of [Bubble Sort is notoriously bad](https://youtu.be/k4RRi_ntQc8) (`O(N²)`).
 
 Better algorithms like quick sort and merge sort achieve `O(N log(N))`. [Some people](https://en.wikipedia.org/wiki/Time_complexity#Linearithmic_time) call `O(N log(N))` "linearithmic" as shorthand. Personally, I just say "N log N".
 
-#### Exponential — `O(2ⁿ)`
+### Exponential — `O(2ⁿ)`
 
 An example of this is a recursive Fibonacci function:
 
@@ -190,13 +186,13 @@ def fib(n):
 Its growth doubles for every 1 of the input.
 
 
-#### I didn't mention...
+### I didn't mention...
 
 `O(N³)` or `O(N⁴)`
 
 For now, just be aware that they exist.
 
-#### Best Case, Worst Case, and Expected Case
+### Best Case, Worst Case, and Expected Case
 
 Back to the example of `is_palindrome`:
 
@@ -285,7 +281,7 @@ This `linear_space` function requires an _n_-length list to be held in memory, a
 Time vs. Space
 ----
 
-It's common to find time and space competing with one another. People in every field talk about "design trade-offs". In CS, there tends to be a trade-off between time and space. You definitely want to minimize both, but at some level you'll probably find yourself facing design trade-offs.
+It's common to find time and space competing with one another. People in every field talk about "design trade-offs". In CS, there tends to be a trade-off between time and space. You definitely want to minimize both, but at some level you'll probably find yourself facing trade-offs.
 
 An example where you face a trade-off is with caching. In order to speed up retrieving information,  a cache stores some information that you've already spent time calculating. This way, if the same information is requested (if you have the same input) you can skip running the calculations and just grab the answer you have stored. Given the same input, it spares you the runtime. The trade off is that you're using extra space to decrease your runtime.
 
