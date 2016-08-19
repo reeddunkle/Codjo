@@ -57,7 +57,7 @@ During the code review I went over how much time the function requires, and I us
 
 To measure time complexity, we talked about how the algorithm responds to inputs of different sizes.
 
-If the input is `"1234554321"`, it's length is 10: `len(text) == 10`.
+If the input is `"1234554321"`, its length is 10: `len(text) == 10`.
 
 If it goes the whole way through the for-loop, it will assign to `i` the numbers `0, 1, 2, 3, 4`
 
@@ -133,10 +133,6 @@ def bubble_sort(numbers):
 
     return numbers
 ```
-
-`numbers` has a length of 10, so `i` will be assigned each number from `0...10`, and `k` will also be assigned each number from `0...10`. The catch is that `k` is going to perform _N_ operations for every one of `i`.
-
-`i` is going to start of at `0`, and then `k` will go through the loop - that is, k will take on values from `0...10`. Then `i` will become `1`, and `k` will again take on values from `0...10`, continuing until `i` becomes `10`.
 
 For each of the 10 iterations of i, we did 10 iterations of k: `10*10 == 10² == 100`
 
