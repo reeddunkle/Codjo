@@ -78,7 +78,7 @@ With the same input, the function now needs to loop _N_ times (where _N_ is the 
 
 This runtime has a **linear** growth rate. The "Big O" notation for linear is `O(N)`.
 
-#### Drop The Constants
+### Drop The Constants
 
 This is counter-intuitive, so pay close attention.
 
