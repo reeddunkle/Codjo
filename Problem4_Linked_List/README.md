@@ -23,7 +23,7 @@ The Node
 
 Don't let this idea intimidate you. This is just a Python class named `Node`. You could name it anything.
 
-You're going to use this as a "factory class". Every time you want to add a new element to your linked list, you're going to create a new instance of this class, and you'll use its attributes and methods to connect it to the previously made nodes.
+Every time you want to add a new element to your linked list, you're going to create a new instance of this class, and you'll use its attributes to connect it to the next node in line.
 
 You can make this prettier with methods like `__repr__`, but at its simplest, the `Node` class for a singly linked list only needs two attributes:
 
