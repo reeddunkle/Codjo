@@ -131,7 +131,21 @@ To get `pop` and `__delitem__` working, you should open up the test script. One 
 
 After you comment one out, write code and run the test until you get that one passing. Then comment out the next one.
 
-If you want the practice, create a nice `__repr__` for the list:
+**More Challenges**:
+
+- Write `LinkedList` so that it accepts an optional iterable as an argument, letting you use it to convert iterables to a linked list.
+
+```
+In [5]: s = "abcde"
+
+In [6]: list(s)
+Out[6]: ['a', 'b', 'c', 'd', 'e']
+
+In [7]: LinkedList(s)
+Out[7]: [*e]->[d]->[c]->[b]->[a]
+```
+
+If you want the practice, create a nice `__repr__` for the list like that:
 
 ```
 In [9]: a = LinkedList()
@@ -147,10 +161,10 @@ Out[12]: [*5]
 In [13]: a.append(3)
 
 In [14]: a
-Out[14]: [*3] --> [5]
+Out[14]: [*3]->[5]
 
 In [15]: a.append(10)
 
 In [16]: a
-Out[16]: [*10] --> [3] --> [5]
+Out[16]: [*10]->[3]->[5]
 ```
