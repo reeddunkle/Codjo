@@ -1,4 +1,4 @@
-# Linked Lists
+# Linked List
 
 A lot of algorithms expect us to know how to use different data structures, but there's generally less focus on how to actually implement them.
 
