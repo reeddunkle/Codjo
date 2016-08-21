@@ -1,24 +1,22 @@
 # Linked Lists
 
-A lot of algorithms we study practice using data structures, and there's generally less focus put on actually implementing them.
+A lot of algorithms expect us to know how to use different data structures, but there's generally less focus on how to actually implement them.
 
 > A linked list is a data structure that represents a sequence of nodes. In a **singly linked list**, each node points to the next node in the linked list. A **doubly linked list** gives each node pointers to both the next node and the previous node. <br/> — Gayle Laakmann McDowell
 
-Linked lists are used to make stacks, queues and deques, so it makes sense to start here.
+You can see visualizations of different kinds of linked lists [here](http://visualgo.net/list). (Note: The site seems a bit buggy right now.)
 
-You can see visualizations of different kinds of linked lists [here](http://visualgo.net/list). (**Note: The site seems a bit buggy currently.**)
-
-This is a singly linked list:
-
-<img src="http://i.imgur.com/tVgxoLN.png" />
-
-A `list` in Python lets you access an element at a particular index in constant time (`O(1)`). A linked list, on the other hand, forces you to start at the first node, called the `head`, and traverse through the list one node at a time until you arrive at the "index" you want.
+A `list` in Python lets you access an element at a particular index in constant time (`O(1)`). A linked list, however, forces you to start at the first node, called the `head`, and traverse through the list one node at a time until you arrive at the "index" you want.
 
 So if you want to find the Kth element in the list, you'll have to iterate through K elements.
 
-The benefit of this set up, though, is that you can add and remove items from the _beginning_ of the list in constant time, where a traditional `list` requires `O(N)`.
+On the other hand, if you set up a doubly linked list, you can add and remove items from the _beginning_ of the list in constant time, where a traditional `list` requires `O(N)`.
 
-In this exercise, you're going to build a singly linked list.
+Linked lists are used to make stacks, queues and deques.
+
+In this exercise, you're going to implement a singly linked list.
+
+<img src="http://i.imgur.com/tVgxoLN.png" />
 
 The Node
 ----
