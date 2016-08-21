@@ -25,12 +25,12 @@ Don't let this idea intimidate you. This is just a Python class named `Node`. Yo
 
 You're going to use this as a "factory class". Every time you want to add a new element to your linked list, you're going to create a new instance of this class, and you'll use its attributes and methods to connect it to the previously made nodes.
 
-You can make this prettier with `__repr__` methods and `__eq__` methods and such, but at its simplest, a singly linked list `Node` class only needs two attributes:
+You can make this prettier with methods like `__repr__`, but at its simplest, the `Node` class for a singly linked list only needs two attributes:
 
-1. `data`, the value stored in the node
-2. `next_node`, a pointer to the next node (this is what "links" them)
+- `data`, the value stored in the node
+- `next_node`, a pointer to the next node (this is what "links" them)
 
-**Note:** There are lots of other names for these attributes. You'll need to name them this to get the tests to pass.
+**Note:** There are lots of other names for these attributes. I'm only forcing you to use these names for the tests.
 
 The Linked List
 ----
@@ -124,9 +124,33 @@ You should raise an `IndexError` if the index is out of range.
 
 This requires you to iterate through the nodes one at a time.
 
+Extra Challenges
 ----
 
-To write `pop` and `__delitem__` working, you should open up the test script. One at a time, comment out a line that starts with `@unittest.skip` before the test function.
+To get `pop` and `__delitem__` working, you should open up the test script. One at a time, comment out the lines that starts with `@unittest.skip` before each test function.
 
-Then write code and run the test until you get that one passing. Then comment out the next one.
+After you comment one out, write code and run the test until you get that one passing. Then comment out the next one.
 
+If you want the practice, create a nice `__repr__` for the list:
+
+```
+In [9]: a = LinkedList()
+
+In [10]: a
+Out[10]: [*None]
+
+In [11]: a.append(5)
+
+In [12]: a
+Out[12]: [*5]
+
+In [13]: a.append(3)
+
+In [14]: a
+Out[14]: [*3] --> [5]
+
+In [15]: a.append(10)
+
+In [16]: a
+Out[16]: [*10] --> [3] --> [5]
+```
