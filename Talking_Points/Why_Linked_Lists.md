@@ -3,19 +3,17 @@ Why would I...linked lists?
 
 Totally fair question.
 
-Sometimes you need to design something that performs a task really well, really efficiently.
+Sometimes you need to design something that performs a task really well, really efficiently. That's what algorithms are all about. We're accustomed to thinking about them as college courses and [1200 page books](https://en.wikipedia.org/wiki/Introduction_to_Algorithms).
 
-That's what algorithms are all about. We're accustomed to thinking about them as college courses and [1200 page books](https://en.wikipedia.org/wiki/Introduction_to_Algorithms).
-
-That stuff all arose out of the basic importance of being able to efficiently perform tasks.
+It's all about the basic importance of being able to efficiently perform tasks.
 
 Consider the stack. You need a structure, a container, that will let you push new items to the top of this structure. You also need to be able to pop the top item from it. And often you need to be able to peek at the top item (without popping it).
 
-We need that functionality and layout, and it makes sense to spend time thinking about how this is set up (what does "top" mean?) and how handle these actions efficiently.
+We need that functionality and layout, and it makes sense to spend time thinking about how this is set up (what does "top" mean?) and how to perform these actions efficiently.
 
-A queue, on the other hand, lets you add new items to the end of the list, remove the oldest items from the beginning, and probably peek at the beginning item without removing it.
+A queue, on the other hand, lets you add new items to the end of the list, remove the oldest items from the beginning, and probably peek at the beginning item without removing it. A doubly linked list is more efficient than an array.
 
-Interview Cake has a good explanation. I'm not going to link to the article until after we finish Problem4 because there are code spoilers, but I recommend poking around their site if you get stuck.
+Interview Cake has a good explanation of the advantages a linked list can offer. (I'm not going to link to the article until after we finish Problem4 because there are code spoilers, but I recommend poking around their site if you get stuck.)
 
 >Like linked lists, arrays also store ordered lists of items, so you usually have a choice of which one to use.
 
@@ -33,15 +31,16 @@ Interview Cake has a good explanation. I'm not going to link to the article unti
 Those are the basics
 ----
 
-What if you want to implement something like a queue, but instead of removing the oldest item, it removes the item with the lowest or highest "priority"? This is called a *priority queue*. You can insert an object and key (its priority), and remove the object with the minimum key.
+What if you want to implement something like a queue, but instead of removing the oldest item, it removes the item with the lowest or highest "priority"? This is called a **priority queue**. You can insert an object and key (its priority), and remove the object with the minimum key.
 
-In our daily coding, we're accustomed to having most of these sorts of things taken care of for us. We define arrays and we manipulate them.
+In our daily coding, we're accustomed to having most of these sorts of things taken care of for us. We define arrays and we manipulate them, and don't pay much attention to how it's all handled.
 
-If you know how to make your own linked list, though, you could find yourself in an exciting position where you're able to actually _engineer_ a data structure that solves a unique problem. Something that does your specific task extremely well.
+If you know how to make your own linked list, though, you could find yourself in an exciting position where you're able to actually _engineer_ a data structure that solves your (or your boss's) unique problem, something that does your specific task extremely well.
 
 In a [blog post](http://jvns.ca/blog/2016/08/16/how-do-you-work-on-something-important/), Julia Evans wrote:
 
 > **I’m not in undergrad anymore**
+
 > I loved being a math/CS undergrad. My professors would give me a series of challenging assignments which were hard but always within my abilities. I improved gradually over time! It was so fun! I was awesome at it! But it is over.
 
 > Being employed is more like -- I have a series of tasks which range from totally trivial to I-don’t-even-know-where-to-start and I need to figure out how to interrogate people and build up my skills so that I can do the hard things. And I need to decide what “good enough” means for the things I do decide to do, and nobody will do it for me, not really.
