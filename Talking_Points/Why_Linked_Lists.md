@@ -53,7 +53,7 @@ You're an architect, an engineer. Someone says, "I need to be able to do this," 
 Hoping to land your first dev job?
 ----
 
-Your main competition are fresh-out-of-school undergrads with a shiny CS degree. At my first on-site one of my interviewers pointed this out to me. He asked, "why should we hire you instead?"
+Your main competition is a fresh-out-of-school undergrad with a shiny CS degree. At my first on-site one of my interviewers pointed this out to me. He asked, "why should we hire you instead?"
 
 What does a CS grad have that I don't? Four years of experience with basic data structures and algorithms.
 
