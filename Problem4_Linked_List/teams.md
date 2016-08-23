@@ -6,7 +6,7 @@
 - Stephan @smsalleyne (ET)
 
 **Team 2**
-- Cindy @cpallares (PT)
+- Cindy @cpallares (CT)
 - Elaine @elaine (ET)
 
 **Team 3**

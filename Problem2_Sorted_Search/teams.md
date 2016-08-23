@@ -10,7 +10,7 @@
 - Elaine @elaine (ET)
 
 **Team 4**
-- Cindy @cpallares (PT)
+- Cindy @cpallares (CT)
 - Luke @lukewrites (PT)
 
 **Team 5**
