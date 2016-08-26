@@ -54,19 +54,32 @@ class TestLinkedList(unittest.TestCase):
         self.assertTrue(length == 3)
 
 
+    def test_len_zero(self):
+        length = self.list.__len__()
+
+        self.assertTrue(length == 0)
+
+
+    def test_len_one(self):
+        self.list.append("Prof. Plum")
+        length = self.list.__len__()
+
+        self.assertTrue(length == 1)
+
+
     def test_succeed_getitem(self):
         self.list.append("Prof. Plum")
         self.list.append("Mrs. Peacock")
         self.list.append("Mr. Boddy")
 
         result = self.list.__getitem__(0)
-        self.assertTrue(result.data == "Mr. Boddy")
+        self.assertTrue(result == "Mr. Boddy")
 
         result = self.list.__getitem__(1)
-        self.assertTrue(result.data == "Mrs. Peacock")
+        self.assertTrue(result == "Mrs. Peacock")
 
         result = self.list.__getitem__(2)
-        self.assertTrue(result.data == "Prof. Plum")
+        self.assertTrue(result == "Prof. Plum")
 
 
     def test_fail_getitem(self):
