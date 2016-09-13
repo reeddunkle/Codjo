@@ -64,8 +64,6 @@ Print the number of cells in the largest _region_ in the given matrix.
 
 **Explanation**
 
-Explanation
-
 The diagram below depicts two regions of the matrix; for each region, the component cells forming the region are marked with an `X`:
 
 ```
