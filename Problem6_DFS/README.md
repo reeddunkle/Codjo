@@ -105,4 +105,4 @@ Let me know if you have questions about this. I don't want HR's interface to slo
 
 Best of luck! Let me know if you have questions.
 
-Also! We've got a new mentor on board, [Adiren Lamarque](https://github.com/lamarqua)! Other than being a really find fellow in general, he also has expertise in a handful of languages beyond Python. So, if you'd like to do this week's problem in a different language, send @adrien.lamarque a message on Slack and chat with him.
+Also! We've got a new mentor on board, [Adiren Lamarque](https://github.com/lamarqua)! Other than being a really fine fellow in general, he also has expertise in a handful of languages beyond Python. So, if you'd like to do this week's problem in a different language, send @adrien.lamarque a message on Slack and chat with him.
