@@ -24,7 +24,7 @@ Note the use of a stack -- the call stack in this case. The main thing that dist
 The Problem
 ----
 
-#### Connected Cells in a Grid
+### Connected Cells in a Grid
 
 
 Consider a matrix with `n` rows and `m` columns, where each cell contains either a `0` or a `1`. Any cell containing a `1` is called a _filled_ cell. Two cells are said to be _connected_ if they are adjacent to each other horizontally, vertically, or diagonally, provided that the location exists in the matrix.
