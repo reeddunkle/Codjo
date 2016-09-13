@@ -78,7 +78,7 @@ The first region has five cells and the second region has one cell. Because we w
 Tests
 ----
 
-This is taken from [this](https://www.hackerrank.com/challenges/connected-cell-in-a-grid) problem. I'd like you to use HR's tests.
+This is taken from [this](https://www.hackerrank.com/challenges/connected-cell-in-a-grid) HackerRank problem. I'd like you to use HR's tests.
 
 Because HR's I/O system takes a little getting used to, here it the pattern that I use for almost all of my HR problems:
 
