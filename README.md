@@ -2,7 +2,7 @@
 
 <img src="http://i.imgur.com/cxwlPpE.png" />
 
-[Leo](https://github.com/leotrs) and I are organizing weekly educational coding challenges for [RC Start](https://www.recurse.com/blog/99-free-one-on-one-mentorship-for-new-programmers) folks. Each week I'll gather the participants and put them into pairs. I'll assign a challenge that seems like it will offer good learning opportunities, and we'll practice:
+[Leo](https://github.com/leotrs), [Serena](https://github.com/sereprz), [Adrien](https://github.com/lamarqua) and I are organizing weekly educational coding challenges for [RC Start](https://www.recurse.com/blog/99-free-one-on-one-mentorship-for-new-programmers) folks. Each week we'll gather the participants and put them into pairs. We'll assign a challenge that seems like it will offer good learning opportunities, and we'll practice:
 
 - Collaborating
 - Algorithms
