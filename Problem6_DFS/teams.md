@@ -11,8 +11,8 @@
 - Cindy @cpallares (CT)
 - Reed @reed (ET)
 
-**Team Not-Python**
-- Paul, @paultopia (CT)
+**Team Functional-Programming**
+- Paul @paultopia (CT)
 - Elaine @elaine (ET)
 - Adrien @adrien.lamarque (GMT+2 France 6 hours ahead of ET)
 
