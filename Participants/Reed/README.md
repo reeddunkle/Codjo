@@ -1,1 +1,3 @@
-Feel free to edit.
+Languages I can lead on:
+- Python
+- JavaScript
